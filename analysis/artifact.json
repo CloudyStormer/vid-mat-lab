@@ -1,0 +1,183 @@
+{
+  "surface": "report",
+  "manifest": {
+    "version": 1,
+    "surface": "report",
+    "title": "抖音热点再创作与卖课：可行性判断",
+    "description": "对热点再创作、跨平台分发和知识产品变现的决策分析。",
+    "generatedAt": "2026-07-13T12:00:00+08:00",
+    "filters": [],
+    "cards": [],
+    "charts": [
+      {
+        "id": "revenue_sensitivity_chart",
+        "title": "低价产品流水敏感性场景",
+        "subtitle": "每 100 万次垂直有效播放，人民币；规划情景，不是平台均值",
+        "type": "bar",
+        "dataset": "scenario_model",
+        "sourceId": "planning_assumptions",
+        "valueFormat": "number",
+        "encodings": {
+          "x": { "field": "scenario", "type": "nominal", "label": "规划情景" },
+          "y": { "field": "gross_revenue_cny", "type": "quantitative", "label": "产品流水（元）" },
+          "tooltip": [
+            { "field": "leads", "type": "quantitative", "label": "有效线索" },
+            { "field": "orders", "type": "quantitative", "label": "订单" },
+            { "field": "price_cny", "type": "quantitative", "label": "客单价（元）" }
+          ]
+        }
+      }
+    ],
+    "tables": [
+      {
+        "id": "revenue_scenarios",
+        "title": "每 100 万次垂直有效播放的低价产品流水敏感性",
+        "subtitle": "规划假设，不是平台均值；流水未扣退款、投流、税费和交付成本",
+        "dataset": "scenario_model",
+        "sourceId": "planning_assumptions",
+        "defaultSort": {
+          "field": "gross_revenue_cny",
+          "direction": "asc"
+        },
+        "columns": [
+          { "field": "scenario", "label": "情景", "type": "text" },
+          { "field": "qualified_views", "label": "有效播放", "format": "number" },
+          { "field": "lead_rate", "label": "有效线索率", "format": "percent" },
+          { "field": "leads", "label": "有效线索", "format": "number" },
+          { "field": "purchase_rate", "label": "线索成交率", "format": "percent" },
+          { "field": "orders", "label": "订单", "format": "number" },
+          { "field": "price_cny", "label": "客单价（元）", "format": "number" },
+          { "field": "gross_revenue_cny", "label": "产品流水（元）", "format": "number" }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "planning_assumptions",
+        "label": "低价产品收入敏感性规划假设",
+        "path": "analysis/scenario_assumptions.csv"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "title",
+        "type": "markdown",
+        "body": "# 抖音热点再创作与卖课：可行性判断"
+      },
+      {
+        "id": "executive_summary",
+        "type": "markdown",
+        "body": "## Executive Summary\n\n- **能做，但‘搬运 + AI 洗稿 + 卖课’本身不是稳健生意。** 稳健版本应当是：热点发现 → 核验原始信源 → 加入独立观点或实测 → 原创表达 → 按平台重制 → 用低价产品验证需求。\n- **可以变现，但 9.9 / 19.9 元产品主要承担首次成交和需求验证。** 收入取决于垂直流量占比、有效线索率、信任、产品兑现度和成交率；低价产品必须依赖更大的订单量，同样 100 万播放，规划流水可能从约 198 元到约 4.99 万元。\n- **抖音热点可以继续做成抖音视频，不需要强制平台隔离。** 真正要隔离的是内容表达：只借题，不借成片；只借事实，不照搬文案、镜头、声音和结构。跨平台只能降低同质化感，不能消除版权或平台处罚风险。\n- **建议先做 30 天小实验，不要先开发大而全的自动搬运系统。** 先验证一个垂直领域、三种原创栏目和一款 9.9 元产品，再根据购买者反馈增加 19.9 元组合包或 49.9 元工作坊。"
+      },
+      {
+        "id": "model_judgment",
+        "type": "markdown",
+        "body": "## 靠谱的是‘热点再创作’，不是‘搬运流水线’\n\n**热点能够降低选题成本，但不能替代创作价值。** 热点提供的是已经被市场验证过的注意力；真正能形成 IP 的，是你稳定的筛选标准、判断框架、案例积累、语言风格和可验证结果。\n\n这套模式最薄弱的地方，是很多账号把‘改字、换配音、换画面、调顺序’误当原创。抖音现行用户协议要求发布内容原创或取得合法授权，并要求可能造成混淆的 AI 非真实内容显著标识；《著作权法》同时保护复制、改编和信息网络传播等权利。AI 只是一种加工工具，不会把未经授权的素材自动变成安全资产。\n\n因此，建议把生产对象从‘博主视频’改成‘热点事实卡’：记录事件、原始来源、关键数据、争议点和你的判断，再从零写稿、自拍或使用已授权素材。这样才可能长期积累账号信用和自己的内容资产。\n\n参考：[抖音用户服务协议](https://www.douyin.com/agreements/?id=6773906068725565448)、[中华人民共和国著作权法](https://www.npc.gov.cn/c2/c30834/202011/t20201119_308796.html)。"
+      },
+      {
+        "id": "monetization_takeaway",
+        "type": "markdown",
+        "body": "## 低价产品能卖，但必须依靠销量和稳定流量\n\n**9.9 / 19.9 元通常是前端体验品，不是完整大课。** 泛娱乐热点容易获得播放，但用户没有购买学习产品的动机；垂直热点播放可能较小，却更容易产生主页访问和订单。规划时应把‘有效播放’限定为目标人群对目标问题产生兴趣的播放，而不是总播放。\n\n下面用同样 100 万次垂直有效播放，对 9.9 / 19.9 / 49.9 元产品做敏感性测试。公式是：产品流水 = 有效播放 × 有效线索率 × 线索成交率 × 客单价。"
+      },
+      {
+        "id": "revenue_chart_block",
+        "type": "chart",
+        "chartId": "revenue_sensitivity_chart"
+      },
+      {
+        "id": "revenue_table_block",
+        "type": "table",
+        "tableId": "revenue_scenarios"
+      },
+      {
+        "id": "monetization_interpretation",
+        "type": "markdown",
+        "sourceId": "planning_assumptions",
+        "body": "**中性规划约为 250 单、4,975 元产品流水；这不是利润，也不是承诺。** 保守档只有 20 单、198 元，说明纯热点流量即使播放很大，也可能没有商业价值。强转化档达到 1,000 单、49,900 元，要求清晰垂直定位、稳定商品访问率、持续信任和成熟产品，不能在冷启动阶段当预算依据。\n\n更现实的净收益还要扣除退款、投流、平台与支付费用、税费、剪辑制作、客服和交付时间。低价产品的核心作用是完成第一次成交、验证需求和积累付费用户；不能只是把免费内容重新打包。"
+      },
+      {
+        "id": "platform_strategy",
+        "type": "markdown",
+        "body": "## 抖音到抖音完全可行，平台隔离不是护身符\n\n**同平台再创作的优点是速度快、热点语境一致，缺点是竞争最激烈、同质化识别和权利人发现也更快。** 因此，抖音热点转抖音视频应使用原创口播、自拍、屏幕演示、独立图表或获授权素材，并增加实质性新信息，例如反常识判断、实测、成本拆解、行业背景或行动建议。\n\n**跨到公众号的价值在于承接深度和信任，而不是规避版权。** 抖音适合 20–90 秒的结论、冲突和案例；公众号适合 1,500–3,000 字的方法、证据、步骤和产品承接。跨平台时要重写结构和表达，但原作品权利不会因为换平台而消失。公众账号治理同样禁止抄袭、伪原创，并要求加强原创版权保护。\n\n最稳的结构是‘一套研究，多种原生表达’：同一热点先形成自己的研究底稿，再分别创作抖音短视频和公众号长文，而不是先下载一个成片再改造成多个版本。\n\n参考：[互联网用户公众账号信息服务管理规定](https://www.cac.gov.cn/2021-01/22/c_1612887880656609.htm)。"
+      },
+      {
+        "id": "compliance",
+        "type": "markdown",
+        "body": "## AI 与卖课都要显式合规\n\n**AI 生成内容需要按要求声明和标识。** 《人工智能生成合成内容标识办法》已于 2025 年 9 月 1 日施行，用户发布生成合成内容应主动声明并使用平台标识功能，不得恶意删除或隐匿标识。对热点资讯尤其要标注来源、避免编造和误导。\n\n**当内容开始推销课程，就进入广告和消费者权益范围。** 课程效果、收益案例、学员评价和稀缺性话术必须真实可证；以知识介绍、体验分享等方式推销并附购买方式时，要注意广告可识别性。不要用‘保证涨粉、保证月入、零基础必赚’一类不可验证承诺。\n\n参考：[人工智能生成合成内容标识办法](https://www.cac.gov.cn/2025-03/14/c_1743654684782215.htm)、[互联网广告管理办法](https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_d93a579afd45413e8576e4623fab348f.html)、[互联网广告可识别性执法指南](https://www.samr.gov.cn/ggjgs/tzgg/art/2024/art_fb2f2f9b53f04dc294df2105b2e050a0.html)。"
+      },
+      {
+        "id": "next_steps",
+        "type": "markdown",
+        "body": "## 先验证一个 30 天最小闭环\n\n1. **只选一个可成交的垂直领域。** 例如 AI 办公、短视频剪辑、求职、健身或本地商家增长；不要做与最终产品无关的泛热点。\n2. **建立热点事实卡。** 至少两个独立来源，记录原始链接、发布时间、事实、争议点、可引用素材授权状态和你的观点。\n3. **固定三种原创栏目。** ‘热点背后的机制’、‘我实际测了一次’、‘普通人下一步怎么做’，每类 8–10 条。\n4. **抖音和公众号原生重制。** 抖音做结论与冲突，公众号做证据与方法；不下载博主成片进入生产线。\n5. **先用 9.9 元产品验证付费。** 第一款可以是模板包、清单、Prompt、案例或 30 分钟微课；有真实购买和反馈后，再增加 19.9 元组合包或 49.9 元工作坊，不必预设几百、上千元大课。\n6. **设继续/停止门槛。** 30 天至少发布 24 条；若 3 条以上进入账号播放前 20%、有效线索率达到 0.1%、首批产品退款率可控且有复购/转介绍信号，再扩大自动化。"
+      },
+      {
+        "id": "further_questions",
+        "type": "markdown",
+        "body": "## 下一步最值得回答的问题\n\n- 你真正有经验、能持续产出案例并能交付结果的垂直领域是什么？\n- 课程之外，用户是否更愿意先买模板、工具、咨询或代服务？\n- 每 1,000 次垂直播放能产生多少收藏、主页访问、私信和有效线索？\n- 哪类内容带来的用户成交和退款表现最好，而不只是播放最高？\n- 你是否能为每条内容保存信源、授权、脚本版本和 AI 标识记录，以便申诉或审计？"
+      },
+      {
+        "id": "caveats",
+        "type": "markdown",
+        "body": "## Caveats and Assumptions\n\n- 本报告核对公开规则截至 2026 年 7 月 13 日；平台细则、类目准入和流量策略会继续变化，发布和售卖前仍需查看账号后台的最新规则。\n- 收入表是决策敏感性模型，不是行业均值、收益承诺或平台官方数据。真实表现必须用你自己的 30 天数据替换。\n- 收入为课程流水，不含退款、投流、平台费用、税费、内容生产和交付人力，也不构成法律、税务或投资意见。\n- 当前项目仓库在分析前只有 Git 元数据，没有现有代码、内容样本、账号数据或历史成交数据可供验证，因此结论属于有规则依据的方向性建议。"
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "generatedAt": "2026-07-13T12:00:00+08:00",
+    "status": "ready",
+    "datasets": {
+      "scenario_model": [
+        {
+          "scenario": "保守",
+          "rank": 1,
+          "qualified_views": 1000000,
+          "lead_rate": 0.001,
+          "leads": 1000,
+          "purchase_rate": 0.02,
+          "orders": 20,
+          "price_cny": 9.9,
+          "gross_revenue_cny": 198
+        },
+        {
+          "scenario": "中性",
+          "rank": 2,
+          "qualified_views": 1000000,
+          "lead_rate": 0.005,
+          "leads": 5000,
+          "purchase_rate": 0.05,
+          "orders": 250,
+          "price_cny": 19.9,
+          "gross_revenue_cny": 4975
+        },
+        {
+          "scenario": "强转化",
+          "rank": 3,
+          "qualified_views": 1000000,
+          "lead_rate": 0.01,
+          "leads": 10000,
+          "purchase_rate": 0.10,
+          "orders": 1000,
+          "price_cny": 49.9,
+          "gross_revenue_cny": 49900
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "planning_assumptions",
+      "path": "analysis/scenario_assumptions.csv",
+      "description": "三档低价产品变现规划假设；每档以 100 万次垂直有效播放为统一基数，公式为有效播放 × 有效线索率 × 线索成交率 × 客单价。",
+      "query": {
+        "engine": "duckdb",
+        "language": "sql",
+        "sql": "SELECT scenario, rank, qualified_views, lead_rate, leads, purchase_rate, orders, price_cny, gross_revenue_cny FROM read_csv_auto('analysis/scenario_assumptions.csv') ORDER BY rank",
+        "description": "读取并按保守、中性、强转化顺序展示三档规划假设。",
+        "tables_used": ["analysis/scenario_assumptions.csv"],
+        "executed_at": "2026-07-13T12:00:00+08:00",
+        "filters": ["每档 qualified_views = 1000000", "gross_revenue_cny = qualified_views × lead_rate × purchase_rate × price_cny"]
+      }
+    }
+  ]
+}
