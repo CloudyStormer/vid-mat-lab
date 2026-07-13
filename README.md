@@ -183,6 +183,7 @@
 - [完整商业分析报告](analysis/report.html)
 - [报告源数据与内容](analysis/artifact.json)
 - [低价产品变现假设](analysis/scenario_assumptions.csv)
+- [第一条图文：健身公式科学纠错（成品、文案与源脚本）](outputs/first-post-fitness-equals/content.md)
 
 ## 合规底线
 
@@ -192,4 +193,3 @@
 - AI 生成内容主动声明并使用平台标识功能；
 - 售卖产品时，效果、案例、销量和用户评价必须真实可证；
 - 不做保证收益、保证涨粉或制造虚假稀缺的宣传。
-
