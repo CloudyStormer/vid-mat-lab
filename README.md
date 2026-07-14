@@ -184,6 +184,7 @@
 - [报告源数据与内容](analysis/artifact.json)
 - [低价产品变现假设](analysis/scenario_assumptions.csv)
 - [第一条图文：健身公式科学纠错（成品、文案与源脚本）](outputs/first-post-fitness-equals/content.md)
+- [第一条横版视频：7 张成品图、剪辑顺序与字幕](outputs/first-post-fitness-equals/video-storyboard-horizontal.md)
 
 ## 合规底线
 
