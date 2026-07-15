@@ -2,7 +2,7 @@
 
 ## 状态
 
-- 当前阶段：素材生成中
+- 当前阶段：v2 口播与动画提示词已确认，待可灵生成动态片段
 - 创建日期：2026-07-15
 - 计划发布日期：待定
 - 实际发布日期：
@@ -30,13 +30,14 @@
 ## 当前交付
 
 - 研究：[选题说明](01-research/notes.md)
-- 口播：[五句短梗](02-script/narration.md)
-- 字幕：[v1 字幕草稿](02-script/subtitles-v1.srt)
+- 当前口播：[v2 第一人称自言自语稿](02-script/narration-v2.md)
+- 当前字幕：[v2 字幕草稿](02-script/subtitles-v2.srt)
 - 图片：[五张连续竖版画面](03-visuals/vertical-v1)
 - 视觉索引：[03-visuals/README.md](03-visuals/README.md)
 - 图片提示词：[image-prompts.md](04-prompts/image-prompts.md)
-- 图生视频提示词：[video-prompts.md](04-prompts/video-prompts.md)
-- 剪辑：[storyboard.md](05-editing/storyboard.md) 与 [editing-v1.md](05-editing/editing-v1.md)
+- 当前图生视频提示词：[video-prompts-v2.md](04-prompts/video-prompts-v2.md)
+- 当前剪辑：[editing-v2.md](05-editing/editing-v2.md)
+- 历史版本：保留 [v1 口播](02-script/narration.md)、[v1 动画提示词](04-prompts/video-prompts.md) 和 [v1 剪辑稿](05-editing/editing-v1.md)
 - 发布：待图片与视频测试后确定
 
 ## 制作记录
@@ -45,6 +46,7 @@
 - 决定不删除第一集，也不立刻投放；将真实焦虑改编为第 002 集短梗实验。
 - 为避免变成单纯卖惨，主题从“平台不给我推流”改为“我被刷新数据这件事内耗疯了”。
 - 已生成五张 941×1672 竖版连续画面，情绪依次为不安、错愕、惊恐、癫狂和过载瘫倒。
+- 口播 v2 改为小电阻人全程第一人称自言自语，不再像旁白说明；五张图片保持不变。
 
 ## 画面预览
 
@@ -74,17 +76,17 @@
 002-refreshing-stats-meltdown/
 ├─ README.md
 ├─ 01-research/       选题来源、事实边界和表达限制
-├─ 02-script/         五句口播与 v1 字幕
+├─ 02-script/         v1/v2 五句口播与字幕
 ├─ 03-visuals/        视觉索引、竖版 v1 分镜与封面占位
-├─ 04-prompts/        图片提示词与图生视频提示词
-├─ 05-editing/        分镜时长、生成顺序和剪辑参数
+├─ 04-prompts/        图片提示词与 v1/v2 图生视频提示词
+├─ 05-editing/        v1/v2 分镜时长、生成顺序和剪辑参数
 ├─ 06-publishing/     标题、配文、标签和发布状态
 └─ 07-deliverables/   五张成图、后续动态片段和成片状态
 ~~~
 
 ## 下一步
 
-1. 用即梦或可灵逐张生成 2 至 3 秒动态片段。
+1. 按 [v2 可灵提示词](04-prompts/video-prompts-v2.md) 逐张生成动态片段。
 2. 选择节奏最快的片段拼成 10 至 15 秒成片。
 3. 添加五句短字幕和夸张音效，再决定标题与发布时间。
 
