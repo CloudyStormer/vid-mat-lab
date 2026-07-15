@@ -1,11 +1,12 @@
-Add-Type -AssemblyName System.Drawing
+﻿Add-Type -AssemblyName System.Drawing
 
 $ErrorActionPreference = 'Stop'
-$OutputDir = if ($PSScriptRoot) {
-    $PSScriptRoot
+$EpisodeDir = if ($PSScriptRoot) {
+    Split-Path -Parent $PSScriptRoot
 } else {
-    Join-Path (Get-Location) 'outputs\first-post-fitness-equals'
+    Get-Location
 }
+$OutputDir = Join-Path $EpisodeDir '03-visuals\vertical-v1'
 
 $W = 1080
 $H = 1440
