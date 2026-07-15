@@ -31,10 +31,12 @@
 
 - 研究：[选题说明](01-research/notes.md)
 - 口播：[五句短梗](02-script/narration.md)
-- 图片：[五张连续竖版画面](03-visuals)
+- 字幕：[v1 字幕草稿](02-script/subtitles-v1.srt)
+- 图片：[五张连续竖版画面](03-visuals/vertical-v1)
+- 视觉索引：[03-visuals/README.md](03-visuals/README.md)
 - 图片提示词：[image-prompts.md](04-prompts/image-prompts.md)
 - 图生视频提示词：[video-prompts.md](04-prompts/video-prompts.md)
-- 剪辑：[storyboard.md](05-editing/storyboard.md)
+- 剪辑：[storyboard.md](05-editing/storyboard.md) 与 [editing-v1.md](05-editing/editing-v1.md)
 - 发布：待图片与视频测试后确定
 
 ## 制作记录
@@ -48,23 +50,37 @@
 
 ### 1. 信号没人接
 
-![信号发出后无人回应](03-visuals/01-signal-no-response.png)
+![信号发出后无人回应](03-visuals/vertical-v1/01-signal-no-response.png)
 
 ### 2. 四十多播放
 
-![看到四十多播放后的错愕](03-visuals/02-forty-views-shock.png)
+![看到四十多播放后的错愕](03-visuals/vertical-v1/02-forty-views-shock.png)
 
 ### 3. 零互动
 
-![看到零互动后的惊恐](03-visuals/03-zero-interactions-panic.png)
+![看到零互动后的惊恐](03-visuals/vertical-v1/03-zero-interactions-panic.png)
 
 ### 4. 疯狂刷新
 
-![疯狂刷新数据](03-visuals/04-refresh-meltdown.png)
+![疯狂刷新数据](03-visuals/vertical-v1/04-refresh-meltdown.png)
 
 ### 5. 过载瘫倒
 
-![刷新到过载瘫倒](03-visuals/05-overheated-aftermath.png)
+![刷新到过载瘫倒](03-visuals/vertical-v1/05-overheated-aftermath.png)
+
+## 本集目录
+
+~~~text
+002-refreshing-stats-meltdown/
+├─ README.md
+├─ 01-research/       选题来源、事实边界和表达限制
+├─ 02-script/         五句口播与 v1 字幕
+├─ 03-visuals/        视觉索引、竖版 v1 分镜与封面占位
+├─ 04-prompts/        图片提示词与图生视频提示词
+├─ 05-editing/        分镜时长、生成顺序和剪辑参数
+├─ 06-publishing/     标题、配文、标签和发布状态
+└─ 07-deliverables/   五张成图、后续动态片段和成片状态
+~~~
 
 ## 下一步
 

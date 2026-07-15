@@ -13,11 +13,11 @@
 
 | 顺序 | 文件 | 情绪与动作 |
 |---:|---|---|
-| 1 | `03-visuals/01-signal-no-response.png` | 发布后等待，弱信号发出又消失，轻微不安 |
-| 2 | `03-visuals/02-forty-views-shock.png` | 贴近手机，瞳孔放大，突然错愕 |
-| 3 | `03-visuals/03-zero-interactions-panic.png` | 向后弹起，双手张开，电流爆发，惊恐尖叫 |
-| 4 | `03-visuals/04-refresh-meltdown.png` | 疯狂点击刷新，旋涡眼、残影、电流风暴 |
-| 5 | `03-visuals/05-overheated-aftermath.png` | 过载瘫倒，冒烟，仍想伸手刷新 |
+| 1 | `03-visuals/vertical-v1/01-signal-no-response.png` | 发布后等待，弱信号发出又消失，轻微不安 |
+| 2 | `03-visuals/vertical-v1/02-forty-views-shock.png` | 贴近手机，瞳孔放大，突然错愕 |
+| 3 | `03-visuals/vertical-v1/03-zero-interactions-panic.png` | 向后弹起，双手张开，电流爆发，惊恐尖叫 |
+| 4 | `03-visuals/vertical-v1/04-refresh-meltdown.png` | 疯狂点击刷新，旋涡眼、残影、电流风暴 |
+| 5 | `03-visuals/vertical-v1/05-overheated-aftermath.png` | 过载瘫倒，冒烟，仍想伸手刷新 |
 
 ## 最终提示词结构
 
