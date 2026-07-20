@@ -2,15 +2,15 @@
 
 ## 来源与用途
 
-- 生成日期：2026-07-19；场景 08 轻动作尾帧更新于 2026-07-20。
+- 生成日期：2026-07-19；场景 08“没想到你敢反嘴”尾帧 v3 更新于 2026-07-20。
 - 生成方式：内置图像生成。
 - 角色身份参考：`../../../../assets/brand/resistor-mascot-reference.png`
 - 对白与场景：`../../02-script/dialogue-v4-eight-sourced-scenes.md`
 - 图片提示词：`../../04-prompts/image-prompts-v1.md`
 - 图生视频提示词：`../../04-prompts/video-prompts-v1-single-mouth-start-end.md`
-- 场景 08 当前提示词：`../../04-prompts/scene-08-video-v2-story-first.md`
+- 场景 08 当前提示词：`../../04-prompts/scene-08-video-v3-incredulous.md`
 - `contact-sheet.jpg` 仅用于视觉检查，不作为视频画面。
-- 场景 08 的过度反应尾帧已移至 `../archive/08-blunt-speech-end-v1-overreaction.png`，不计入当前 16 张画面。
+- 场景 08 的过度反应 v1 和反应过平 v2 均已移至 `../archive/`，不计入当前 16 张画面。
 
 ## 文件校验
 
@@ -31,11 +31,12 @@
 | 07-suffer-blessing-start.png | 1672×941 | 1764858 | `53e959b2af3ea1a9afc3133abdc6e1f05bcb23d34bd3d7d8217ea931534f0ecb` |
 | 07-suffer-blessing-end.png | 1672×941 | 1884233 | `d4b9324d8891b939d395d8ada404a77536488cc17ff31acfb625a40717d18512` |
 | 08-blunt-speech-start.png | 1672×941 | 1909355 | `5a9c203606c4ea8b68c9728cb98310ccb9f13079bd8405d509d08400f8a5a84a` |
-| 08-blunt-speech-end-v2-subtle.png | 1672×941 | 1930085 | `f01504f33b4a1072706b3952c0154031f8c940a1b3232525a749fe1b0f7994f6` |
-| contact-sheet.jpg | 1680×1048 | 602778 | `8e07c16189ba0becdb90f93b4f6a2ac3fb0dbc00c3b4ca21d912a3c6e12f2bca` |
+| 08-blunt-speech-end-v3-incredulous.png | 1672×941 | 1940925 | `abb92ec3dfdec1c0399cd938a2c8b4ff2e5c64f19520381126d1dc968cd77a28` |
+| contact-sheet.jpg | 1680×1048 | 640632 | `1afeb8c1a3ec138515c7505e3fccabdbf0879742aac6e6754a99f093f8161683` |
 
 ## 已归档文件
 
 | 文件 | 尺寸 | 字节 | SHA-256 | 原因 |
 |---|---:|---:|---|---|
 | `../archive/08-blunt-speech-end-v1-overreaction.png` | 1672×941 | 1925476 | `1fbb4b15a7f59793b8fb8d8e386ab118780331e7ab4a02e35957899651c70c4` | 男同事后退捂嘴、背景人物反应，首尾差过大 |
+| `../archive/08-blunt-speech-end-v2-too-flat.png` | 1672×941 | 1930085 | `f01504f33b4a1072706b3952c0154031f8c940a1b3232525a749fe1b0f7994f6` | 男同事只是收手沉脸，看不出“没想到你敢反嘴”的心理落差 |

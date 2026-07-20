@@ -1,5 +1,7 @@
 # 场景 08 图生视频 v2｜先讲故事、再给提示词
 
+> 历史版本：动作已经收小，但男同事的结尾表情过平，看不出“没想到你敢反嘴”的心理落差。当前请使用 [v3](scene-08-video-v3-incredulous.md)。
+
 ## 一、这个故事讲什么
 
 办公室里，一名同事没有被邀请，却随口评价小电阻人的工作能力。为了避免承担冒犯别人的责任，他先给自己找好台阶：“我这个人说话直，你别介意。”
@@ -26,7 +28,7 @@
 - 运镜：固定或极轻微推近
 - 创意 / 提示词自由度：低或偏低
 - 首帧：`../03-visuals/horizontal-v1/08-blunt-speech-start.png`
-- 尾帧：`../03-visuals/horizontal-v1/08-blunt-speech-end-v2-subtle.png`
+- 尾帧：`../03-visuals/archive/08-blunt-speech-end-v2-too-flat.png`
 - 不使用：`../03-visuals/archive/08-blunt-speech-end-v1-overreaction.png`，该版本动作跨度过大，已归档。
 
 ## 四、直接复制的提示词
