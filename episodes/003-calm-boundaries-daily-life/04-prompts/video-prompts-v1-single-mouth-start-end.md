@@ -1,5 +1,7 @@
 # 第 003 集图生视频提示词 v1｜首尾帧单嘴收紧版
 
+> 历史版本：场景 01—07 的背景反应和首尾动作跨度经复核仍然偏大，当前请使用 [场景 01—07 v2 故事优先低动作版](scenes-01-07-video-v2-story-first.md)；场景 08 使用独立 v3。
+
 ## 使用方法
 
 1. 在即梦或可灵选择“首尾帧 / 起始帧与结束帧”图生视频模式。
@@ -26,7 +28,7 @@
 ## 01｜大家都在熬
 
 - 首帧：`../03-visuals/horizontal-v1/01-overtime-start.png`
-- 尾帧：`../03-visuals/horizontal-v1/01-overtime-end.png`
+- 历史尾帧：`../03-visuals/archive/01-overtime-end-v1-background-reacts.png`
 - 生成时长：10 秒
 - 口播：主管“你看，大家都还在熬呢。你怎么每天一到点就走？”小电阻人“他们多少钱，我多少钱啊？工资不一样，为什么熬夜时间要一样？”
 
@@ -43,7 +45,7 @@
 ## 02｜团结与待遇
 
 - 首帧：`../03-visuals/horizontal-v1/02-solidarity-pay-start.png`
-- 尾帧：`../03-visuals/horizontal-v1/02-solidarity-pay-end.png`
+- 历史尾帧：`../03-visuals/archive/02-solidarity-pay-end-v1-overreaction.png`
 - 生成时长：10 秒
 - 口播：领导“待遇有意见也别带怨气。团队最重要，大家要讲团结。”小电阻人“行。那您工资分我一半，我保证一点怨气都没有。都是为了团结嘛。”
 
@@ -77,7 +79,7 @@
 ## 04｜太爷爷叫什么
 
 - 首帧：`../03-visuals/horizontal-v1/04-marriage-ancestor-start.png`
-- 尾帧：`../03-visuals/horizontal-v1/04-marriage-ancestor-end.png`
+- 历史尾帧：`../03-visuals/archive/04-marriage-ancestor-end-v1-large-motion.png`
 - 生成时长：10 秒
 - 口播：长辈“不结婚、不生孩子，以后连记得你的人都没有。”小电阻人“那您先说说，您太爷爷叫什么名字？”
 
@@ -94,7 +96,7 @@
 ## 05｜良心按购物金额算吗
 
 - 首帧：`../03-visuals/horizontal-v1/05-tour-shopping-start.png`
-- 尾帧：`../03-visuals/horizontal-v1/05-tour-shopping-end.png`
+- 历史尾帧：`../03-visuals/archive/05-tour-shopping-end-v1-crowd-moves.png`
 - 生成时长：10 秒
 - 口播：导游“出来旅游多少要支持一下。什么都不买，人得对得起自己的良心。”小电阻人“所以，不买你的东西就算没良心？这良心是按购物金额算的吗？”
 
@@ -111,7 +113,7 @@
 ## 06｜朋友不做，钱要还
 
 - 首帧：`../03-visuals/horizontal-v1/06-debt-friendship-start.png`
-- 尾帧：`../03-visuals/horizontal-v1/06-debt-friendship-end.png`
+- 历史尾帧：`../03-visuals/archive/06-debt-friendship-end-v1-position-jump.png`
 - 生成时长：10 秒
 - 口播：朋友“不就欠你点钱吗？你催成这样，以后朋友还做不做了？”小电阻人“既然朋友都做不成了，那钱更该还清。转账吧。”
 
@@ -128,7 +130,7 @@
 ## 07｜福如东海，您慢慢享
 
 - 首帧：`../03-visuals/horizontal-v1/07-suffer-blessing-start.png`
-- 尾帧：`../03-visuals/horizontal-v1/07-suffer-blessing-end.png`
+- 历史尾帧：`../03-visuals/archive/07-suffer-blessing-end-v1-recoil.png`
 - 生成时长：10 秒
 - 口播：同事“年轻人多做一点没坏处。吃点亏是福，别什么都计较。”小电阻人“这么好的福我不敢独享。祝您福如东海，您自己慢慢享。”
 
