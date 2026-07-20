@@ -1,14 +1,16 @@
-# 第 003 集首尾帧 v1 清单
+# 第 003 集当前首尾帧清单
 
 ## 来源与用途
 
-- 生成日期：2026-07-19
+- 生成日期：2026-07-19；场景 08 轻动作尾帧更新于 2026-07-20。
 - 生成方式：内置图像生成。
 - 角色身份参考：`../../../../assets/brand/resistor-mascot-reference.png`
 - 对白与场景：`../../02-script/dialogue-v4-eight-sourced-scenes.md`
 - 图片提示词：`../../04-prompts/image-prompts-v1.md`
 - 图生视频提示词：`../../04-prompts/video-prompts-v1-single-mouth-start-end.md`
+- 场景 08 当前提示词：`../../04-prompts/scene-08-video-v2-story-first.md`
 - `contact-sheet.jpg` 仅用于视觉检查，不作为视频画面。
+- 场景 08 的过度反应尾帧已移至 `../archive/08-blunt-speech-end-v1-overreaction.png`，不计入当前 16 张画面。
 
 ## 文件校验
 
@@ -29,5 +31,11 @@
 | 07-suffer-blessing-start.png | 1672×941 | 1764858 | `53e959b2af3ea1a9afc3133abdc6e1f05bcb23d34bd3d7d8217ea931534f0ecb` |
 | 07-suffer-blessing-end.png | 1672×941 | 1884233 | `d4b9324d8891b939d395d8ada404a77536488cc17ff31acfb625a40717d18512` |
 | 08-blunt-speech-start.png | 1672×941 | 1909355 | `5a9c203606c4ea8b68c9728cb98310ccb9f13079bd8405d509d08400f8a5a84a` |
-| 08-blunt-speech-end.png | 1672×941 | 1925476 | `1fbb4b15a7f59793b8fb8d8e386ab118780331e7eab4a02e35957899651c70c4` |
-| contact-sheet.jpg | 1680×1048 | 601271 | `d2ce6a65012c0a9a6263f71e69a8f74031deee7b44a0680b50b00675360e5a53` |
+| 08-blunt-speech-end-v2-subtle.png | 1672×941 | 1930085 | `f01504f33b4a1072706b3952c0154031f8c940a1b3232525a749fe1b0f7994f6` |
+| contact-sheet.jpg | 1680×1048 | 602778 | `8e07c16189ba0becdb90f93b4f6a2ac3fb0dbc00c3b4ca21d912a3c6e12f2bca` |
+
+## 已归档文件
+
+| 文件 | 尺寸 | 字节 | SHA-256 | 原因 |
+|---|---:|---:|---|---|
+| `../archive/08-blunt-speech-end-v1-overreaction.png` | 1672×941 | 1925476 | `1fbb4b15a7f59793b8fb8d8e386ab118780331e7ab4a02e35957899651c70c4` | 男同事后退捂嘴、背景人物反应，首尾差过大 |
