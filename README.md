@@ -11,7 +11,8 @@
 - 已归档：[第 001 集｜健身公式不能直接画等号](episodes/001-fitness-formulas-no-equals/README.md)
 - 第 001 集状态：已于 2026-07-15 19:50 发布；初始约 40 次播放、留存和互动偏弱，正在等待 24/72 小时数据复盘
 - 第 002 集：[刷新数据刷到发疯](episodes/002-refreshing-stats-meltdown/README.md)，成片已由用户在剪映导出，待完成媒体归档
-- 当前制作：[第 003 集｜不吵架，把问题原路还回去](episodes/003-calm-boundaries-daily-life/README.md)，剪映成片 v1 与封面已归档，待发布
+- 第 003 集：[不吵架，把问题原路还回去](episodes/003-calm-boundaries-daily-life/README.md)，剪映成片 v1 与封面已归档，待发布
+- 当前制作：[第 004 集｜没流量？那就换颗星球](episodes/004-zero-loss-awakening/README.md)，科技形态、短梗首尾帧、五秒提示词和无声节奏预览已完成，待生成正式动态
 
 ## 换电脑后怎样继续
 
