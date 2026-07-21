@@ -7,6 +7,7 @@
 - 图片本身不生成文字、字幕、Logo 或水印。
 - 每组起始帧和收尾帧保持相同场景、服装、光线和镜头轴线，方便后续首尾帧图生视频。
 - 角色已检查：白色脸部只有腰带上方一张嘴；灰色腰带和白色锯齿保持封闭硬质结构，没有舌头、牙齿或第二张嘴。
+- 八组首尾帧已经生成对应的动态片段，见 [07-deliverables/video-clips-v1](../07-deliverables/video-clips-v1/)；剪映成片见 [07-deliverables/README.md](../07-deliverables/README.md)。
 
 ## 联系表
 
