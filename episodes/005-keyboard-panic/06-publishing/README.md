@@ -1,5 +1,13 @@
 # 发布材料 v1
 
+## 发布状态
+
+- 状态：已发布。
+- 发布日期：2026-07-22。
+- 具体时间：待补充。
+- 作品链接：待补充。
+- 已归档平台版：[keyboard-panic-published-v1.mp4](../07-deliverables/keyboard-panic-published-v1.mp4)。
+
 ## 主标题
 
 ```text
