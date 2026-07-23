@@ -2,7 +2,7 @@
 
 ## 状态
 
-- 当前阶段：故事线确认中
+- 当前阶段：口播 v2 确认中
 - 负责人：用户与 Codex
 - 创建日期：2026-07-23
 - 计划发布日期：待定
@@ -33,8 +33,11 @@
 ## 当前交付
 
 - 选题与保留主题：[01-research/topic-pool.md](01-research/topic-pool.md)
-- 故事线和一分钟口播：[02-script/storyline-v1.md](02-script/storyline-v1.md)
-- 八张图分镜草案：[03-visuals/storyboard-v1.md](03-visuals/storyboard-v1.md)
+- 当前故事线和一分钟口播：[02-script/storyline-v2-action-ladder.md](02-script/storyline-v2-action-ladder.md)
+- 上一版故事线：[02-script/storyline-v1.md](02-script/storyline-v1.md)
+- 异步职场沟通原则：[01-research/async-communication-principles.md](01-research/async-communication-principles.md)
+- 当前八张图分镜：[03-visuals/storyboard-v2-action-ladder.md](03-visuals/storyboard-v2-action-ladder.md)
+- 上一版分镜：[03-visuals/storyboard-v1.md](03-visuals/storyboard-v1.md)
 - 图片提示词：待故事线确认后生成
 - 图片：待生成
 - 剪辑：待图片和最终配音完成
@@ -45,11 +48,12 @@
 - 2026-07-23：第七集回归“反内耗”主线。候选包含领导说“明天聊聊”、下班后脑子仍在上班、同事回复问号、休息羞耻、小错引发自我否定、消息未回和完美主义拖延。
 - 用户选择“同事只回了一个问号”，要求制作约一分钟、以说明为主的静态配图口播视频，不制作动画；其余主题保留供后续剧集继续选择。
 - 本版把重点放在“事实与脑补分开”，不把敏感本身写成缺点，也不预设同事一定友善或恶意；可执行动作是直接澄清。
+- 用户复核 v1 后指出口播重复解释脑补，却没有覆盖追问后仍不回复的情况。v2 改为四步行动链：具体澄清、带背景和时间点追问、按紧急程度切换沟通方式、到期留痕；同时注明付款、发布、合同和审批等关键事项不能把沉默当同意。
 
 ## 下一步
 
-1. 用户确认故事线和口播语气。
-2. 根据确认稿收紧为最终逐段口播，每段单独放入可复制代码块。
+1. 用户确认 v2 口播和四步行动链。
+2. 根据确认稿拆成最终逐段口播，每段单独放入可复制代码块。
 3. 使用固定 IP 生成 8 张统一风格的横版 16:9 无文字图片。
 4. 完成配音后，按音频长度调整每张图时长。
 
