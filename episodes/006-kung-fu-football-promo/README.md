@@ -24,12 +24,15 @@
 
 ## 当前交付
 
+- 完整资产入口：[第 006 集素材与提示词总清单](ASSET_MANIFEST.md)
 - 事实核验：[热点与事实核验](01-research/fact-check.md)
 - 10 秒口播：[口播 v1](02-script/voiceover-v1.md)
 - 新版黑幕揭场口播：[开场口播 v2](02-script/intro-voiceover-v2.md)
 - 首尾帧与封面成图：[视觉素材说明](03-visuals/README.md)
 - 黑幕揭场四张关键帧：[分镜与顺序](03-visuals/intro-v1/README.md)
 - Grok 生成动态素材：[`03-grok-generated-video-v1.mp4`](03-visuals/03-grok-generated-video-v1.mp4)
+- Grok 最新广播候选：[`04-grok-stadium-announcement-v2.mp4`](03-visuals/04-grok-stadium-announcement-v2.mp4)
+- Grok 三段补充候选：[`05-grok-clip-7d9b3c20.mp4`](03-visuals/05-grok-clip-7d9b3c20.mp4)、[`06-grok-clip-f5f98e25.mp4`](03-visuals/06-grok-clip-f5f98e25.mp4)、[`07-grok-clip-a10a77d2.mp4`](03-visuals/07-grok-clip-a10a77d2.mp4)
 - 图片提示词：[正式首尾帧提示词 v2｜含星爷](04-prompts/image-prompts-v2-with-stephen.md)
 - 新版开场图片提示词：[黑幕揭场四张图片提示词 v1](04-prompts/intro-image-prompts-v1.md)
 - 视频提示词：[正式 10 秒提示词 v4｜无头顶球、仅两手、持喇叭说话、自然踢球](04-prompts/video-prompt-v4-four-locks-natural-football.md)
@@ -64,6 +67,9 @@
 - 2026-07-23：用户进一步明确跳台段的两张图片必须分别作为强制首帧和尾帧，故事必须表现“拉开幕布后跳到后方木台”，并要求腿绝对不能拉长、画面不能穿帮。新增 v7，逐项锁定首尾帧、蛋体整体短弧移动、极短腿逐帧冻结，以及幕布、手、喇叭、木台和星爷之间的遮挡与防穿透关系。
 - 2026-07-23：新增最后一组正式 10 秒双帧宣布提示词。角色始终站在木箱上，以自然愉快、精神饱满的状态宣布《功夫女足》话题；再次逐项锁定唯一蛋体、两手两脚、极短腿、五官在蛋体上半部的正确位置和唯一小嘴。
 - 2026-07-23：实测 v5 再次在大蛋上方生成带脸小球。原因是喇叭遮挡原嘴但提示词又要求明显口型，模型按人形结构补出独立头部；新增最终 v6。新版明确“结构高于口型”，原嘴被喇叭遮挡时允许少动或不明显，禁止以口型、表情或补全头部为由生成头顶球；同时把黄色闪电和蓝色电流折线锁定为直接贴合唯一蛋壳的无厚度二维标识，并把远景足球限制在角色轮廓之外。
+- 2026-07-23：归档本轮新 Grok 候选 `04-grok-stadium-announcement-v2.mp4`。源文件与仓库副本均为 5,131,187 字节，SHA-256 为 `02C88D91982703F009FDE57F9182EE751380C7801E217CDEDB07BF237F68CEC0`；媒体属性为 10 秒、720×1280、24fps。新增 `ASSET_MANIFEST.md`，把本集星爷版图片、黑幕关键帧、两份动态候选、全部图片/视频提示词、剪辑和发布入口集中登记。
+- 2026-07-23：继续归档三段 6 秒 Grok 素材：`05-grok-clip-7d9b3c20.mp4`、`06-grok-clip-f5f98e25.mp4`、`07-grok-clip-a10a77d2.mp4`。三份仓库副本均与下载源文件哈希一致；前两份为 720×1280，第三份为 720×1264，均为 24fps。当前第六集共保存 5 段动态候选。
+- 2026-07-23：把后续出现的上下叠蛋、第三只手、长腿和再次生成头顶球的截图归档到 `05-editing/issues/`，并新增问题索引，形成“失败现象—提示词修正”的完整记录。
 - 2026-07-22：图片不生成文字；封面标题在剪映中确定性添加。
 
 ## 风险与处理

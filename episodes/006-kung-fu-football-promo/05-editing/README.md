@@ -10,9 +10,11 @@
 
 ## 当前候选素材
 
-- 视频：[`03-grok-generated-video-v1.mp4`](../03-visuals/03-grok-generated-video-v1.mp4)
-- 时长：10 秒
-- 状态：已归档，待逐帧复核和剪映整合，不视为最终成片
+- 最新视频：[`04-grok-stadium-announcement-v2.mp4`](../03-visuals/04-grok-stadium-announcement-v2.mp4)
+- 较早视频：[`03-grok-generated-video-v1.mp4`](../03-visuals/03-grok-generated-video-v1.mp4)
+- 三段补充视频：[`05-grok-clip-7d9b3c20.mp4`](../03-visuals/05-grok-clip-7d9b3c20.mp4)、[`06-grok-clip-f5f98e25.mp4`](../03-visuals/06-grok-clip-f5f98e25.mp4)、[`07-grok-clip-a10a77d2.mp4`](../03-visuals/07-grok-clip-a10a77d2.mp4)
+- 当前共 5 段候选：2 段 10 秒、3 段 6 秒；均不视为最终成片
+- 先逐段播放并按“黑幕开场—揭场/落箱—正式广播”标记用途，再决定剪辑顺序，不按文件编号直接拼接
 - 剪辑前先检查：头顶额外球体、手臂数量、喇叭持续性、唯一嘴开合、星爷稳定性、球员跑动与足球轨迹
 
 ## 先生成动画
@@ -21,8 +23,8 @@
 2. 首帧上传 `03-visuals/01-stadium-broadcast-start.png`。
 3. 尾帧上传 `03-visuals/02-stadium-broadcast-end.png`。
 4. 选择 9:16、10 秒、固定镜头或最低运镜强度。
-5. 粘贴 `04-prompts/video-prompt-v4-four-locks-natural-football.md` 的主提示词；有单独负面框时同时粘贴其中的负面提示词。
-6. 关闭自动配音和自动字幕；不要启用平台数字人口型，由 v4 提示词直接生成小电阻唯一嘴的拟说话开合。
+5. 粘贴 `04-prompts/video-prompt-v6-final-zero-head-orb.md` 的主提示词；有单独负面框时同时粘贴其中的负面提示词。
+6. 关闭自动配音和自动字幕；不要启用平台数字人口型。若喇叭遮挡原嘴，允许口型不明显，绝不让模型另补一颗头或第二张嘴。
 7. 生成至少两个候选。若平台最高只支持 5 秒，按提示词中的两段方案拆分。
 
 ## 候选视频验收
@@ -43,9 +45,9 @@
 - 小电阻全程恰好两只手：左手托喇叭筒身、右手握手柄，不出现额外手臂和手势。
 - 远景球员连续带球、跑位、传球和射门，脚落地、球沿草坪移动，没有漂浮飞踢或惊吓反应。
 
-## v2 失败记录
+## 失败记录
 
-问题截图：`issues/v2-extra-head-missing-megaphone.png`。
+完整问题截图与处理表见 [`issues/README.md`](issues/README.md)。其中 v2 的代表问题截图为 `issues/v2-extra-head-missing-megaphone.png`。
 
 - 蓝色二维电流符号被模型解释成一颗长有眼睛的球形小脑袋。
 - 主角色被错误改成“独立头＋身体”的机器人结构，违反头身一体 IP 设定。
