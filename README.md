@@ -14,7 +14,7 @@
 - 第 003 集：[不吵架，把问题原路还回去](episodes/003-calm-boundaries-daily-life/README.md)，剪映成片 v1 与封面已归档，待发布
 - 第 004 集：[没流量？那就换颗星球](episodes/004-zero-loss-awakening/README.md)，科技形态、短梗首尾帧、五秒提示词和无声节奏预览已完成，待生成正式动态
 - 最新发布：[第 005 集｜爸爸们别划，我正在扣 1](episodes/005-keyboard-panic/README.md)，已于 2026-07-22 发布；10 秒竖版平台成片、音频和联系表已归档，待补作品链接并做数据复盘
-- 当前制作：[第 006 集｜只能帮你到这了，宣传到这了](episodes/006-kung-fu-football-promo/README.md)，含卡通化星爷的首尾帧、封面和 10 秒 Grok 候选动态已归档，进入剪辑复核与整合
+- 当前制作：[第 006 集｜只能帮你到这了，宣传到这了](episodes/006-kung-fu-football-promo/README.md)，含卡通化星爷的首尾帧、封面、10 秒 Grok 候选动态，以及“黑幕裂开—揭场—跳箱”的新版开头关键帧与提示词，待生成短动态并整合
 
 ## 换电脑后怎样继续
 
