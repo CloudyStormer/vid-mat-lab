@@ -33,6 +33,7 @@
 - 图片提示词：[正式首尾帧提示词 v2｜含星爷](04-prompts/image-prompts-v2-with-stephen.md)
 - 新版开场图片提示词：[黑幕揭场四张图片提示词 v1](04-prompts/intro-image-prompts-v1.md)
 - 视频提示词：[正式 10 秒提示词 v4｜无头顶球、仅两手、持喇叭说话、自然踢球](04-prompts/video-prompt-v4-four-locks-natural-football.md)
+- 愉快宣布段提示词：[正式 10 秒 v5｜双帧、五官位置与短肢比例锁定](04-prompts/video-prompt-v5-happy-announcement-anatomy-lock.md)
 - 黑幕揭场提示词：[三段首尾帧动画与剪映时间线](04-prompts/intro-curtain-reveal-v1.md)
 - 黑幕揭场提示词 v2：[四段单蛋主体与四肢拓扑锁定版](04-prompts/intro-curtain-reveal-v2-anatomy-lock.md)
 - 黑幕揭场提示词 v3：[四段参考图外形与短肢比例冻结版](04-prompts/intro-curtain-reveal-v3-exact-reference.md)
@@ -60,6 +61,7 @@
 - 2026-07-23：用户确认剪辑必须保留首尾帧连续性，第一段喊停不改；新增 v5，仅重写第二至第四段。每段以前一段尾图作为首帧、下一张目标图作为尾帧，并把同一只手的任务变化拆成明确的非重叠时间区间，同时继续冻结参考图中的短肢比例。
 - 2026-07-23：用户提供现有 6 秒黑幕视频、正式广播首图和正式广播尾图三项素材，要求重写后两段。新增 v6：保留现有黑幕段；第二段从黑幕视频最后一帧落到木箱；第三段从准备广播过渡到举喇叭发声，完整保留双帧、双手、短腿、唯一嘴和喇叭连续性约束。
 - 2026-07-23：用户进一步明确跳台段的两张图片必须分别作为强制首帧和尾帧，故事必须表现“拉开幕布后跳到后方木台”，并要求腿绝对不能拉长、画面不能穿帮。新增 v7，逐项锁定首尾帧、蛋体整体短弧移动、极短腿逐帧冻结，以及幕布、手、喇叭、木台和星爷之间的遮挡与防穿透关系。
+- 2026-07-23：新增最后一组正式 10 秒双帧宣布提示词。角色始终站在木箱上，以自然愉快、精神饱满的状态宣布《功夫女足》话题；再次逐项锁定唯一蛋体、两手两脚、极短腿、五官在蛋体上半部的正确位置和唯一小嘴。
 - 2026-07-22：图片不生成文字；封面标题在剪映中确定性添加。
 
 ## 风险与处理
@@ -80,10 +82,11 @@
 
 ## 下一步
 
-1. 保留现有 6 秒黑幕视频；跳台段优先使用 [首尾帧、短腿冻结与防穿帮版 v7](04-prompts/intro-curtain-reveal-v7-start-end-jump-no-clipping.md)，正式广播段继续使用 [后两段 v6](04-prompts/intro-curtain-reveal-v6-three-assets-two-clips.md) 的第三段提示词。
-2. 在剪映按约 7 秒新版开头拼接，随后接 `03-grok-generated-video-v1.mp4` 或用 v4 重生成的正式宣传段。
-3. 对齐新版两句开场口播、原四句口播、字幕、撕布/落地音效、低音量热血音乐和封面文字。
-4. 导出后把最终视频复制到 `07-deliverables/`，更新本 README 与发布状态。
+1. 保留现有 6 秒黑幕视频；跳台段优先使用 [首尾帧、短腿冻结与防穿帮版 v7](04-prompts/intro-curtain-reveal-v7-start-end-jump-no-clipping.md)。
+2. 使用 [愉快宣布段 v5](04-prompts/video-prompt-v5-happy-announcement-anatomy-lock.md)，以 `01-stadium-broadcast-start.png` 和 `02-stadium-broadcast-end.png` 生成最后 10 秒正式宣布段；先验收五官位置、手数、腿长和双脚站箱，再验收口型、广播波与球员动作。
+3. 在剪映按约 7 秒新版开头拼接，随后接新生成的正式宣布段。
+4. 对齐新版两句开场口播、原四句口播、字幕、撕布/落地音效、低音量热血音乐和封面文字。
+5. 导出后把最终视频复制到 `07-deliverables/`，更新本 README 与发布状态。
 
 ## 发布后数据
 
