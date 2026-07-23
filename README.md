@@ -15,7 +15,7 @@
 - 第 004 集：[没流量？那就换颗星球](episodes/004-zero-loss-awakening/README.md)，科技形态、短梗首尾帧、五秒提示词和无声节奏预览已完成，待生成正式动态
 - 最新发布：[第 005 集｜爸爸们别划，我正在扣 1](episodes/005-keyboard-panic/README.md)，已于 2026-07-22 发布；10 秒竖版平台成片、音频和联系表已归档，待补作品链接并做数据复盘
 - 当前制作：[第 006 集｜只能帮你到这了，宣传到这了](episodes/006-kung-fu-football-promo/README.md)，含卡通化星爷的首尾帧、封面、10 秒 Grok 候选动态，以及“黑幕裂开—揭场—跳箱”的新版开头关键帧与提示词，待生成短动态并整合
-- 最新策划：[第 007 集｜同事只回了一个问号](episodes/007-question-mark-overthinking/README.md)，约一分钟说明型口播故事线与八张静态图分镜已完成，待确认后生成图片
+- 最新制作：[第 007 集｜同事只回了一个问号](episodes/007-question-mark-overthinking/README.md)，八段口播、八张横版配图和完整生成提示词已归档，待进入剪辑
 
 ## 换电脑后怎样继续
 
