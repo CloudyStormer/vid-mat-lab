@@ -16,6 +16,7 @@
 - 最新发布：[第 005 集｜爸爸们别划，我正在扣 1](episodes/005-keyboard-panic/README.md)，已于 2026-07-22 发布；10 秒竖版平台成片、音频和联系表已归档，待补作品链接并做数据复盘
 - 当前制作：[第 006 集｜只能帮你到这了，宣传到这了](episodes/006-kung-fu-football-promo/README.md)，含卡通化星爷的首尾帧、封面和 10 秒 Grok 候选动态已归档，进入剪辑复核与整合
 - 最新策划：[第 007 集｜同事只回了一个问号](episodes/007-question-mark-overthinking/README.md)，约一分钟说明型口播故事线与八张静态图分镜已完成，待确认后生成图片
+- 最新制作：[第 008 集｜认真剪的没人看，随手发的却爆了](episodes/008-hard-work-vs-random-viral/README.md)，五张 9:16 半哑光 3D 关键帧、五段口播、图生视频提示词和发布材料已完成，待生成动态并剪辑
 
 ## 换电脑后怎样继续
 
