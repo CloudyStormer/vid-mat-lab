@@ -2,7 +2,7 @@
 
 ## 状态
 
-- 当前阶段：五张关键帧、口播和图生视频提示词已完成，待生成动态并剪辑
+- 当前阶段：五张关键帧与五段生成视频已归档，待剪辑、逐帧复核和导出
 - 负责人：用户与 Codex
 - 创建日期：2026-07-27
 - 画面规格：竖屏 9:16
@@ -33,6 +33,8 @@
 - 口播与屏幕文字：[`02-script/voiceover-v1.md`](02-script/voiceover-v1.md)
 - 五张正式关键帧：[`03-visuals/keyframes-v1/`](03-visuals/keyframes-v1/)
 - 图生视频提示词：[`04-prompts/image-to-video-v1.md`](04-prompts/image-to-video-v1.md)
+- 五段生成视频就地索引：[`03-visuals/keyframes-v1/GENERATED_VIDEOS.md`](03-visuals/keyframes-v1/GENERATED_VIDEOS.md)
+- 生成视频收录记录：[`07-deliverables/generated-videos-v1.md`](07-deliverables/generated-videos-v1.md)
 - 剪辑顺序：[`05-editing/edit-plan-v1.md`](05-editing/edit-plan-v1.md)
 - 发布材料：[`06-publishing/publishing-v1.md`](06-publishing/publishing-v1.md)
 
@@ -43,10 +45,11 @@
 - 用户再次确认固定 IP 母版，并要求 3D 不能重塑角色。
 - 第二轮先后测试低质感和过度高光；最终确定为细腻半哑光材质，角色原貌优先。
 - 2026-07-28：五张竖屏正式关键帧完成并归档。
+- 2026-07-29：用户手动放入的五段10秒、720×1280、24fps生成视频已完成哈希与元数据校验；保留 `11.mp4` 至 `55.mp4` 的原文件名和原位置，只新增剧情顺序索引。
 
 ## 下一步
 
-1. 按 `04-prompts/image-to-video-v1.md` 依次生成五段动态。
-2. 在剪映按 `05-editing/edit-plan-v1.md` 排列并添加分段配音。
-3. 字幕在剪辑阶段添加，不让图生模型生成中文字。
-
+1. 按01至05顺序导入五段生成视频。
+2. 按剪辑表分别选取约3秒、3秒、3秒、4秒、5秒的有效区间。
+3. 对齐五段口播与字幕，完成逐帧角色连续性质检。
+4. 添加音效、BGM、封面并导出最终成片。
