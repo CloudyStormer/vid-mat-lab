@@ -2,9 +2,9 @@
 
 ## 状态
 
-- 当前阶段：素材生成
+- 当前阶段：素材复核
 - 创建日期：2026-07-29
-- 计划时长：8 秒左右
+- 计划时长：8 秒左右；当前 Grok 动态为 10 秒
 - 画幅：9:16 竖版
 - 抖音作品链接：待发布后补充
 
@@ -48,12 +48,14 @@
 3. 第一版形象出现泛化的大眼睛和头饰圆珠；第二版去掉圆珠并收回角色表情；第三版把眼睛、眉毛、鼻子和嘴整体放大，恢复“小内耗”熟悉的半眯眼神态。
 4. 锁定最终口播：“哎，别划！财神可算找到你了。金子来喽，接住！今天不许内耗，只许进账。发财啦！”
 5. 完成 8 秒单镜头图生视频提示词，并把“无头顶球、无多肢体、无长腿、无第二颗蛋”写为硬约束。
+6. 收录 Grok 生成的 10 秒竖版动态，文件为 720×1264、24 fps；下一步先逐帧检查角色结构，再进入剪映。
 
 ## 当前交付
 
 - 研究：[01-research/README.md](01-research/README.md)
 - 口播：[02-script/voiceover-v1.md](02-script/voiceover-v1.md)
 - 图片：[01-wealth-god-scattering-gold-v1.png](03-visuals/01-wealth-god-scattering-gold-v1.png)
+- 动态：[01-wealth-god-scattering-gold-grok-v1.mp4](03-visuals/generated-videos-v1/01-wealth-god-scattering-gold-grok-v1.mp4)
 - 图片说明：[03-visuals/README.md](03-visuals/README.md)
 - 视频提示词：[04-prompts/video-prompt-v1.md](04-prompts/video-prompt-v1.md)
 - 剪辑方案：[05-editing/README.md](05-editing/README.md)
@@ -69,8 +71,8 @@
 
 ## 下一步
 
-1. 用最终首图和提示词生成 8 秒竖版动态。
-2. 逐帧检查头顶、四肢、五官、元宝和金币是否变形。
+1. 逐帧检查现有动态的头顶、四肢、五官、元宝和金币是否变形。
+2. 确认可用区间；如尾部有冗余，将 10 秒素材剪到约 8 秒。
 3. 在剪映添加独立口播、音效和字幕，导出后归档到本集。
 
 ## 发布后数据

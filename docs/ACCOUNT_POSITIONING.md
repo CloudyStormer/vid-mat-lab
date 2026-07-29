@@ -17,7 +17,7 @@
 - 名称：白色小电阻人。
 - 角色含义：外界不断施压，但它不再把所有压力都“吃进去”。
 - 角色气质：有点疲惫、有点嘴硬、清醒但不刻薄，最后能找到一点松弛。
-- 统一参考图：[resistor-mascot-reference.png](../assets/brand/resistor-mascot-reference.png)
+- 永久原版底稿：[resistor-mascot-identity-master-original.jpg](../assets/brand/resistor-mascot-identity-master-original.jpg)。只有用户再次明确指定新底稿时才允许替换；其他生成图均不得改变身份母版。
 
 ## 语言风格
 

@@ -32,7 +32,7 @@
 
 ## 视觉原则
 
-- 固定 IP 参考图在 assets/brand/resistor-mascot-reference.png。
+- 固定 IP 的永久原版底稿是 `assets/brand/resistor-mascot-identity-master-original.jpg`；`resistor-mascot-identity-master.png` 与 `resistor-mascot-reference.png` 是同一底稿的 PNG 工作副本。任何新形象都必须以此底稿为唯一身份和结构标准。
 - 必须保留白色圆形电阻身体、灰色电阻腰带、锯齿电阻纹、蓝色电路纹、黄色闪电和黑色粗线条。
 - 当前主视频为横版 16:9；图片默认无文字，文字在剪辑或发布阶段添加。
 - 封面应预留清晰标题区，避免复杂背景和 PPT 式排版。

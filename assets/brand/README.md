@@ -2,7 +2,11 @@
 
 ## 白色小电阻人
 
-主参考图：[resistor-mascot-reference.png](resistor-mascot-reference.png)
+永久原版底稿：[resistor-mascot-identity-master-original.jpg](resistor-mascot-identity-master-original.jpg)
+
+PNG 工作副本：[resistor-mascot-identity-master.png](resistor-mascot-identity-master.png)；兼容旧链接的 [resistor-mascot-reference.png](resistor-mascot-reference.png) 与它内容相同。
+
+完整不可覆盖规则见：[ORIGINAL_MASTER_LOCK.md](ORIGINAL_MASTER_LOCK.md)
 
 它是“内耗儿绝缘体”的固定叙事角色。生成新图片时，参考图承担“角色身份参考”，不是普通风格参考。
 
@@ -26,7 +30,7 @@
 
 ### 图生视频的外形与比例锁定
 
-- 上传的正式首帧、尾帧和 `resistor-mascot-reference.png` 是角色外形的绝对标准。图生视频不是重新设计角色，而是让这一个既有角色做轻微动作。
+- `resistor-mascot-identity-master-original.jpg` 是永久身份与结构标准；上传的正式首帧、尾帧只能帮助保持当前场景连续性，不能覆盖原版底稿。图生视频不是重新设计角色，而是让这个既有角色做轻微动作。
 - 每一帧都必须复制参考图中的蛋体宽高比、外轮廓、腰带高度、五官位置、手脚造型、四肢长度、颜色、材质和电路纹位置。禁止重塑、拉伸、瘦身、增高、改成人形比例或切换画风。
 - 原 IP 只有极短的圆柱短臂和极短的圆柱短腿。脚几乎直接连接在蛋体底部；禁止生成大腿、膝盖、小腿、长胳膊、长腿、跨步和人类式跑步姿势。
 - 四肢的可见长度不得超过所上传参考帧中的长度；动作只能通过小幅摆动、轻微弯曲或角色整体平移完成，不能通过伸长肢体完成。

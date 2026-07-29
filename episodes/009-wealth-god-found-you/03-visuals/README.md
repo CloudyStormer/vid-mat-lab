@@ -19,3 +19,16 @@
 ## 使用方式
 
 将本图作为图生视频的首帧和唯一角色参考，不再同时上传其他角色图，避免模型重新拼装身体结构。
+
+## Grok 生成动态
+
+- 文件：[generated-videos-v1/01-wealth-god-scattering-gold-grok-v1.mp4](generated-videos-v1/01-wealth-god-scattering-gold-grok-v1.mp4)
+- 来源原件：`C:\Users\Administrator\Downloads\grok-67daaf48-f0d8-4a19-9c6c-be566a228652-720p.mp4`
+- 时长：10 秒
+- 像素：720×1264
+- 帧率：24 fps
+- 文件大小：9,269,725 字节
+- SHA-256：`2BA98170BEA5B2F8C9BCCEF9FEC90846EA14D60239835790D7127E35B4D84F4F`
+- 定位：Grok 图生视频原始素材，不是剪映最终成片。
+
+使用前需要逐帧检查头顶是否新增圆球、四肢数量、腿长、五官位置、左右手道具归属以及金币是否发生异形变化。

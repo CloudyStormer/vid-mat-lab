@@ -2,10 +2,12 @@
 
 ## 唯一母版
 
-- 二维身份母版：`resistor-mascot-reference.png`
-- 三维效果母版：`resistor-mascot-3d-locked-reference.png`
+- 永久原版底稿：`resistor-mascot-identity-master-original.jpg`
+- PNG 工作副本：`resistor-mascot-identity-master.png`
+- 旧链接兼容副本：`resistor-mascot-reference.png`，内容与 PNG 工作副本相同
+- 三维效果参考：`resistor-mascot-3d-locked-reference.png`
 
-三维母版来自用户已确认的上一集效果。后续任何图片或视频生成，都只能改变场景、镜头、动作、道具、光线和表情，不得重新设计、重塑或“优化”角色本身。
+用户已明确要求永久以原版底稿为基准。三维参考只负责材质、光影与空间感。后续任何图片或视频生成，都只能改变场景、镜头、动作、道具、服装、光线和表情，不得重新设计、重塑或“优化”角色本身。
 
 ## 永久锁定的外形
 
