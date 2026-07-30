@@ -8,6 +8,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 
+# 历史 v1-v3 重建脚本。当前生产版请使用 generate_mard221_template.py。
 EPISODE_DIR = Path(__file__).resolve().parents[1]
 SOURCE = (
     EPISODE_DIR
@@ -355,7 +356,10 @@ def render_pattern(
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Generate a numbered perler-bead pattern from the episode demo image."
+        description=(
+            "Rebuild historical v1-v3 templates. "
+            "Use generate_mard221_template.py for the current production pattern."
+        )
     )
     parser.add_argument("--grid-size", type=int, default=80)
     parser.add_argument("--cell-size", type=int)
@@ -364,7 +368,7 @@ def main() -> None:
         "--palette",
         choices=sorted(PALETTES),
         default="artkal-s5",
-        help="Use the production Artkal S-5mm palette or rebuild a legacy demo.",
+        help="Rebuild the withdrawn Artkal S-5mm v3 or legacy v1/v2 demos.",
     )
     parser.add_argument("--source", type=Path, default=SOURCE)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
