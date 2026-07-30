@@ -45,11 +45,26 @@
 
 ## 重建命令
 
-在仓库根目录执行：
+脚本依赖 Python 3 和 Pillow。先确认当前 Python 环境能够执行：
+
+```bash
+python3 -c "import PIL"
+```
+
+如果缺少 Pillow，请在所用的 Python 虚拟环境中安装 `Pillow`，再从仓库根目录执行：
 
 ```bash
 python3 episodes/010-photo-to-perler-pattern/07-deliverables/generate_mard221_template.py
 ```
+
+2026-07-30 已使用 Codex 工作区自带的 Pillow 12.2.0 环境在临时目录重建；四个生成文件与当前仓库版本逐文件一致。
+
+## 分享水印版状态
+
+- 当前 `xiaoneihao-cool-120x120-mard221-mini-numbered-pattern.png` 是无水印生产母版，必须保留且不得覆盖。
+- 用户已要求另存一张带“小耗儿”相关重复半透明水印的分享版。
+- 水印只能作为叠加层，不能重绘底板、改变格内色号、颗数、坐标、图例或采购数据。
+- 截至 2026-07-30 交班，水印分享版尚未生成；仓库中不存在可交付的水印版文件。
 
 ## 实做限制
 
