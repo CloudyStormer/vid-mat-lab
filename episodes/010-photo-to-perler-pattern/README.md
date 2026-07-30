@@ -2,7 +2,7 @@
 
 ## 状态
 
-- 当前阶段：广告首帧、口播、图生视频提示词和 40×40 演示模板已完成，待生成动态与剪辑
+- 当前阶段：广告首帧、口播、图生视频提示词和 80×80 高还原演示模板已完成，待生成动态与剪辑
 - 创建日期：2026-07-29
 - 画面规格：竖屏 9:16
 - 建议成片：15—18 秒
@@ -37,8 +37,16 @@
 - 首帧生成提示词：[`04-prompts/keyframe-prompt-v1.md`](04-prompts/keyframe-prompt-v1.md)
 - 剪辑方案：[`05-editing/edit-plan-v1.md`](05-editing/edit-plan-v1.md)
 - 发布材料：[`06-publishing/publishing-v1.md`](06-publishing/publishing-v1.md)
-- 小内耗演示原图与 40×40 模板：[`03-visuals/perler-demo-v1/README.md`](03-visuals/perler-demo-v1/README.md)
-- 可重复生成模板的脚本：[`07-deliverables/generate_perler_template.py`](07-deliverables/generate_perler_template.py)
+- 小内耗 80×80 高还原模板（当前默认）：[`03-visuals/perler-demo-v2/README.md`](03-visuals/perler-demo-v2/README.md)
+- 小内耗 40×40 低豆量模板（历史 v1）：[`03-visuals/perler-demo-v1/README.md`](03-visuals/perler-demo-v1/README.md)
+- 可配置网格与轮廓阈值的重建脚本：[`07-deliverables/generate_perler_template.py`](07-deliverables/generate_perler_template.py)
+
+## 拼豆底板版本决定
+
+- 40×40 仅保留为低豆量方案，主体 483 颗，不再作为高还原展示的默认底板。
+- 80×80 为当前默认高还原方案，主体 1,897 颗；线性分辨率翻倍，网格位置数量从 1,600 增至 6,400。
+- 80×80 明显改善眼睛、嘴角、手指、电路纹、腰部锯齿和鞋子轮廓；装饰背景仍省略，避免无意义增加豆量。
+- 5 mm 拼豆做满 80 格约为 40×40 cm，真实制作需要组合底板。
 
 ## 下一步
 

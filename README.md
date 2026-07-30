@@ -18,7 +18,7 @@
 - 最新制作：[第 007 集｜同事只回了一个问号](episodes/007-question-mark-overthinking/README.md)，八段口播、八张横版配图和完整生成提示词已归档，待进入剪辑
 - 最新制作：[第 008 集｜认真剪的没人看，随手发的却爆了](episodes/008-hard-work-vs-random-viral/README.md)，五张关键帧与五段10秒竖屏生成视频已归档并校验，待剪辑、逐帧复核和导出
 - 最新制作：[第 009 集｜财神可算找到你了](episodes/009-wealth-god-found-you/README.md)，10 秒 Grok 竖版动态已归档并记录元数据，待逐帧复核、剪辑和配音
-- 当前制作：[第 010 集｜你发图，我做拼豆图纸](episodes/010-photo-to-perler-pattern/README.md)，竖屏广告首帧、口播、图生视频提示词及小内耗40×40演示模板已完成，待生成动态与剪辑
+- 当前制作：[第 010 集｜你发图，我做拼豆图纸](episodes/010-photo-to-perler-pattern/README.md)，竖屏广告首帧、口播、图生视频提示词及小内耗80×80高还原模板已完成，40×40保留为低豆量版，待生成动态与剪辑
 
 ## 换电脑后怎样继续
 

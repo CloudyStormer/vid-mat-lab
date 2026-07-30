@@ -2,6 +2,8 @@
 
 这组文件不是粉丝投稿成品，而是用小内耗自身形象演示“原图 → 像素预览 → 带色号底板”的完整交付形式。
 
+本版本现保留为低豆量历史方案。当前默认的高还原交付见 [`../perler-demo-v2/README.md`](../perler-demo-v2/README.md)。
+
 ## 文件
 
 - 酷图原稿：[`xiaoneihao-cool-source.png`](xiaoneihao-cool-source.png)
