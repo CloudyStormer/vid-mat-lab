@@ -1,6 +1,8 @@
 # 小内耗 80×80 拼豆演示模板 v2
 
-这是第 010 集当前默认使用的高还原版电子拼豆图纸。它沿用已经确认的小内耗酷图原稿，把网格从 v1 的 40×40 提高到 80×80，优先保留眼睛、嘴角、手指、电路纹、腰部锯齿和鞋子等识别细节。
+> **已废弃，禁止用于采购或实物制作。** 本版本的 `01`—`07` 是项目临时演示号，不是品牌色号。当前实做版见 [`../perler-demo-v3-artkal-s5/README.md`](../perler-demo-v3-artkal-s5/README.md)。
+
+本版本仅用于保留 80×80 分辨率升级的历史过程。它沿用已经确认的小内耗酷图原稿，把网格从 v1 的 40×40 提高到 80×80，优先保留眼睛、嘴角、手指、电路纹、腰部锯齿和鞋子等识别细节。
 
 旧版 40×40 仍保留为低豆量方案，不覆盖、不伪装成高还原成品。
 
@@ -48,6 +50,8 @@
 ```bash
 python3 episodes/010-photo-to-perler-pattern/07-deliverables/generate_perler_template.py \
   --grid-size 80 \
+  --cell-size 20 \
+  --palette legacy-demo \
   --output-dir episodes/010-photo-to-perler-pattern/03-visuals/perler-demo-v2
 ```
 

@@ -15,10 +15,22 @@ SOURCE = (
     / "perler-demo-v1"
     / "xiaoneihao-cool-source.png"
 )
-DEFAULT_OUTPUT_DIR = EPISODE_DIR / "03-visuals" / "perler-demo-v1"
+DEFAULT_OUTPUT_DIR = EPISODE_DIR / "03-visuals" / "perler-demo-v3-artkal-s5"
 
-# 这是项目内部的通用演示色号，不冒充任一拼豆品牌的官方色号。
-PALETTE = [
+# Artkal 官方 S-5mm RGB 色卡中的真实字母+数字色号。电子 RGB 只用于
+# 屏幕预览；官方明确要求采购与实物对色以实体豆/实体色卡为准。
+ARTKAL_S5_PALETTE = [
+    ("S13", "轮廓黑", "#000000"),
+    ("S01", "主体白", "#FFFFFF"),
+    ("S78", "浅灰", "#C8C9C7"),
+    ("S159", "阴影灰", "#88888D"),
+    ("S54", "电路蓝", "#0090DA"),
+    ("S27", "闪电黄", "#FFC72C"),
+    ("S19", "腮红粉", "#F8C1B8"),
+]
+
+# 仅用于重建已归档的 v1/v2 演示图，禁止作为采购色号。
+LEGACY_DEMO_PALETTE = [
     ("01", "轮廓黑", "#111317"),
     ("02", "主体白", "#F7F7F5"),
     ("03", "浅灰", "#C9CDD2"),
@@ -28,13 +40,15 @@ PALETTE = [
     ("07", "腮红粉", "#F5C6BC"),
 ]
 
+PALETTES = {
+    "artkal-s5": ARTKAL_S5_PALETTE,
+    "legacy-demo": LEGACY_DEMO_PALETTE,
+}
+
 
 def rgb(hex_color: str) -> tuple[int, int, int]:
     value = hex_color.lstrip("#")
     return tuple(int(value[i : i + 2], 16) for i in (0, 2, 4))
-
-
-PALETTE_RGB = [(code, name, rgb(color), color) for code, name, color in PALETTE]
 
 
 def is_omitted_background(pixel: tuple[int, int, int]) -> bool:
@@ -47,10 +61,13 @@ def is_omitted_background(pixel: tuple[int, int, int]) -> bool:
     return pale_blue or navy_halo
 
 
-def nearest_palette(pixel: tuple[int, int, int]) -> str:
+def nearest_palette(
+    pixel: tuple[int, int, int],
+    palette_rgb: list[tuple[str, str, tuple[int, int, int], str]],
+) -> str:
     r, g, b = pixel
     return min(
-        PALETTE_RGB,
+        palette_rgb,
         key=lambda item: (r - item[2][0]) ** 2
         + (g - item[2][1]) ** 2
         + (b - item[2][2]) ** 2,
@@ -83,6 +100,7 @@ def build_grid(
     image: Image.Image,
     grid_size: int,
     coverage_threshold: float,
+    palette_rgb: list[tuple[str, str, tuple[int, int, int], str]],
 ) -> list[list[str]]:
     source = image.convert("RGB")
     width, height = source.size
@@ -110,7 +128,7 @@ def build_grid(
                 continue
 
             avg = tuple(round(sum(channel) / len(kept)) for channel in zip(*kept))
-            row.append(nearest_palette(avg))
+            row.append(nearest_palette(avg, palette_rgb))
         grid.append(row)
     return grid
 
@@ -120,8 +138,10 @@ def write_csvs(
     counts: Counter[str],
     output_dir: Path,
     grid_size: int,
+    palette: list[tuple[str, str, str]],
+    palette_profile: str,
+    stem: str,
 ) -> None:
-    stem = f"xiaoneihao-cool-{grid_size}x{grid_size}"
     with (output_dir / f"{stem}-pattern.csv").open(
         "w", newline="", encoding="utf-8-sig"
     ) as handle:
@@ -134,15 +154,26 @@ def write_csvs(
         "w", newline="", encoding="utf-8-sig"
     ) as handle:
         writer = csv.writer(handle, lineterminator="\n")
-        writer.writerow(["通用色号", "颜色名称", "HEX", "数量"])
-        for code, name, color in PALETTE:
-            writer.writerow([code, name, color, counts[code]])
+        if palette_profile == "artkal-s5":
+            writer.writerow(
+                ["品牌", "色卡版本", "品牌色号", "图案用途", "电子色卡HEX", "数量"]
+            )
+            for code, name, color in palette:
+                writer.writerow(
+                    ["Artkal", "S-5mm官方RGB色卡2024", code, name, color, counts[code]]
+                )
+        else:
+            writer.writerow(["通用色号", "颜色名称", "HEX", "数量"])
+            for code, name, color in palette:
+                writer.writerow([code, name, color, counts[code]])
 
 
 def render_pixel_preview(
     grid: list[list[str]],
     output_dir: Path,
     grid_size: int,
+    palette: list[tuple[str, str, str]],
+    stem: str,
 ) -> None:
     scale = max(12, min(24, 1600 // grid_size))
     preview = Image.new(
@@ -151,7 +182,7 @@ def render_pixel_preview(
         (0, 0, 0, 0),
     )
     draw = ImageDraw.Draw(preview)
-    colors = {code: color for code, _, color in PALETTE}
+    colors = {code: color for code, _, color in palette}
     for y, row in enumerate(grid):
         for x, code in enumerate(row):
             if code:
@@ -164,9 +195,13 @@ def render_pixel_preview(
                     ),
                     fill=colors[code],
                 )
-    preview.save(
-        output_dir / f"xiaoneihao-cool-{grid_size}x{grid_size}-pixel-preview.png"
-    )
+    preview.save(output_dir / f"{stem}-pixel-preview.png")
+
+
+def code_text_color(hex_color: str) -> str:
+    r, g, b = rgb(hex_color)
+    luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b
+    return "#FFFFFF" if luminance < 125 else "#111317"
 
 
 def render_pattern(
@@ -175,6 +210,9 @@ def render_pattern(
     output_dir: Path,
     grid_size: int,
     cell_size: int,
+    palette: list[tuple[str, str, str]],
+    palette_profile: str,
+    stem: str,
 ) -> None:
     margin_left = 88 if grid_size > 40 else 72
     margin_top = 126
@@ -192,7 +230,15 @@ def render_pattern(
     legend_font = load_font(21)
     legend_small = load_font(17)
 
-    edition = "高还原版" if grid_size > 40 else "低豆量版"
+    if palette_profile == "artkal-s5":
+        edition = "Artkal S-5mm 实做版"
+        subtitle = (
+            "5 mm 硬豆｜格内为 Artkal 官方 S 系列色号；"
+            "电子 RGB 仅供参考，采购前用实体豆或实体色卡复核。"
+        )
+    else:
+        edition = "历史演示版"
+        subtitle = "01—07 为项目旧演示号，禁止用于采购；仅用于重建 v1/v2。"
     draw.text(
         (margin_left, 18),
         f"小内耗拼豆模板｜{grid_size}×{grid_size} {edition}",
@@ -201,12 +247,12 @@ def render_pattern(
     )
     draw.text(
         (margin_left, 58),
-        "装饰背景已省略；01—07 为通用演示色号，正式制作前需映射到所用品牌。",
+        subtitle,
         fill="#555D66",
         font=subtitle_font,
     )
 
-    colors = {code: color for code, _, color in PALETTE}
+    colors = {code: color for code, _, color in palette}
     for y, row in enumerate(grid):
         for x, code in enumerate(row):
             x0 = margin_left + x * cell_size
@@ -216,7 +262,7 @@ def render_pattern(
                     (x0, y0, x0 + cell_size, y0 + cell_size),
                     fill=colors[code],
                 )
-                text_color = "#FFFFFF" if code in {"01", "04"} else "#111317"
+                text_color = code_text_color(colors[code])
                 bbox = draw.textbbox((0, 0), code, font=code_font)
                 draw.text(
                     (
@@ -270,13 +316,17 @@ def render_pattern(
     total = sum(counts.values())
     draw.text(
         (margin_left, legend_y),
-        f"色号与数量｜主体共 {total} 颗（不含空白背景）",
+        (
+            f"Artkal S-5mm 色号与数量｜主体共 {total} 颗（不含空白背景）"
+            if palette_profile == "artkal-s5"
+            else f"历史演示号与数量｜主体共 {total} 颗（不含空白背景）"
+        ),
         fill="#111317",
         font=legend_font,
     )
     legend_y += 45
     column_width = 390
-    for index, (code, name, color) in enumerate(PALETTE):
+    for index, (code, name, color) in enumerate(palette):
         col = index % 3
         row = index // 3
         x = margin_left + col * column_width
@@ -292,22 +342,30 @@ def render_pattern(
     note_y = legend_y + 3 * 58 + 10
     draw.text(
         (margin_left, note_y),
-        "说明：本模板用于账号广告与流程演示；不同拼豆品牌的官方色号并不通用。",
+        (
+            "品牌/系列：Artkal S-5mm 硬豆；不得用其他品牌或 Artkal 其他尺寸系列替代。"
+            if palette_profile == "artkal-s5"
+            else "说明：本版本色号不可采购；生产请改用 Artkal S-5mm 实做版或指定品牌色卡。"
+        ),
         fill="#6B737C",
         font=legend_small,
     )
-    canvas.save(
-        output_dir / f"xiaoneihao-cool-{grid_size}x{grid_size}-numbered-pattern.png"
-    )
+    canvas.save(output_dir / f"{stem}-numbered-pattern.png")
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Generate a numbered perler-bead pattern from the episode demo image."
     )
-    parser.add_argument("--grid-size", type=int, default=40)
+    parser.add_argument("--grid-size", type=int, default=80)
     parser.add_argument("--cell-size", type=int)
     parser.add_argument("--coverage-threshold", type=float)
+    parser.add_argument(
+        "--palette",
+        choices=sorted(PALETTES),
+        default="artkal-s5",
+        help="Use the production Artkal S-5mm palette or rebuild a legacy demo.",
+    )
     parser.add_argument("--source", type=Path, default=SOURCE)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     args = parser.parse_args()
@@ -322,24 +380,47 @@ def main() -> None:
     if not 0 < coverage_threshold <= 1:
         parser.error("--coverage-threshold must be greater than zero and at most one")
     cell_size = args.cell_size or (
-        30 if args.grid_size <= 40 else max(16, min(24, 1600 // args.grid_size))
+        30 if args.grid_size <= 40 else max(18, min(24, 1920 // args.grid_size))
     )
     if cell_size < 12:
         parser.error("--cell-size must be at least 12 pixels")
 
     output_dir = args.output_dir.resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
+    palette = PALETTES[args.palette]
+    palette_rgb = [
+        (code, name, rgb(color), color) for code, name, color in palette
+    ]
+    suffix = "-artkal-s5" if args.palette == "artkal-s5" else ""
+    stem = f"xiaoneihao-cool-{args.grid_size}x{args.grid_size}{suffix}"
     source = Image.open(args.source)
-    grid = build_grid(source, args.grid_size, coverage_threshold)
+    grid = build_grid(source, args.grid_size, coverage_threshold, palette_rgb)
     counts: Counter[str] = Counter(code for row in grid for code in row if code)
-    write_csvs(grid, counts, output_dir, args.grid_size)
-    render_pixel_preview(grid, output_dir, args.grid_size)
-    render_pattern(grid, counts, output_dir, args.grid_size, cell_size)
+    write_csvs(
+        grid,
+        counts,
+        output_dir,
+        args.grid_size,
+        palette,
+        args.palette,
+        stem,
+    )
+    render_pixel_preview(grid, output_dir, args.grid_size, palette, stem)
+    render_pattern(
+        grid,
+        counts,
+        output_dir,
+        args.grid_size,
+        cell_size,
+        palette,
+        args.palette,
+        stem,
+    )
     print(
         f"Generated {args.grid_size}x{args.grid_size} template "
-        f"with {sum(counts.values())} beads in {output_dir}."
+        f"with {sum(counts.values())} beads using {args.palette} in {output_dir}."
     )
-    for code, name, _, _ in PALETTE_RGB:
+    for code, name, _, _ in palette_rgb:
         print(f"{code} {name}: {counts[code]}")
 
 
