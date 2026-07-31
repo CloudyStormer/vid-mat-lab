@@ -20,6 +20,7 @@
 - 最新制作：[第 009 集｜财神可算找到你了](episodes/009-wealth-god-found-you/README.md)，10 秒 Grok 竖版动态已归档并记录元数据，待逐帧复核、剪辑和配音
 - 最新成品：[第 010 集｜你发图，我做拼豆图纸](episodes/010-photo-to-perler-pattern/README.md)，中央 10% 水印分享底板和 10 秒竖屏成品已归档，待发布与数据复盘
 - 最新制作：[第 011 集｜AI 没抢他的工作](episodes/011-ai-script-read-aloud/README.md)，采用“真人现场约 2 秒 → 小耗儿接棒模仿 → 近景吐槽”的三段结构；后半段两张小耗儿关键帧与图生视频提示词已完成，真人新闻片段由用户自行处理
+- 最新制作：[第 012 集｜发财还没到账，快乐先到账](episodes/012-dance-off-the-stress/README.md)，竖版花海跳舞关键帧、5 秒图生视频提示词与一句口播已完成，待生成动态
 
 ## 换电脑后怎样继续
 
