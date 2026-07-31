@@ -59,12 +59,13 @@ python3 episodes/010-photo-to-perler-pattern/07-deliverables/generate_mard221_te
 
 2026-07-30 已使用 Codex 工作区自带的 Pillow 12.2.0 环境在临时目录重建；四个生成文件与当前仓库版本逐文件一致。
 
-## 分享水印版状态
+## 分享水印版
 
-- 当前 `xiaoneihao-cool-120x120-mard221-mini-numbered-pattern.png` 是无水印生产母版，必须保留且不得覆盖。
-- 用户已要求另存一张带“小耗儿”相关重复半透明水印的分享版。
-- 水印只能作为叠加层，不能重绘底板、改变格内色号、颗数、坐标、图例或采购数据。
-- 截至 2026-07-30 交班，水印分享版尚未生成；仓库中不存在可交付的水印版文件。
+- 无水印生产母版继续保留，不得覆盖。
+- 分享版：[`xiaoneihao-cool-120x120-mard221-mini-numbered-pattern-watermarked.png`](xiaoneihao-cool-120x120-mard221-mini-numbered-pattern-watermarked.png)
+- 水印文字：`小耗版权`；位置：正中央；不透明度：10%。
+- 分享版尺寸仍为 4,400×5,048，未重新量化、重绘或修改任何格内色号、颗数、坐标、图例及采购数据。
+- 分享版 SHA-256：`5ADD6920AB6F86A23D4F01B9899E53F6DF5F1886D87453C301D9A33BB536B157`。
 
 ## 实做限制
 

@@ -2,10 +2,11 @@
 
 ## 状态
 
-- 当前阶段：广告首帧、口播、图生视频提示词和 120×120 MARD 221 编号实做模板已完成，待生成动态与剪辑
+- 当前阶段：中央水印分享底板和 10 秒竖屏成品均已完成，待发布与数据复盘
 - 创建日期：2026-07-29
 - 画面规格：竖屏 9:16
 - 建议成片：15—18 秒
+- 实际成片：10 秒，720×1264，30 fps
 - 核心用途：为“粉丝投稿转拼豆电子图纸”系列拉来首批有效投稿
 
 ## 本集目标
@@ -42,6 +43,8 @@
 - 完整 221 色 RGB 数据：[`01-research/mard-221-artkal-m-2.6mm-rgb-2025.csv`](01-research/mard-221-artkal-m-2.6mm-rgb-2025.csv)
 - 用户提供的编号范例（只用于确认编号规则，不代表完整色卡）：[`01-research/reference-mard-221-numbering-example.png`](01-research/reference-mard-221-numbering-example.png)
 - 小内耗 120×120 MARD 221 实做模板（当前生产版）：[`03-visuals/perler-demo-v4-mard-221-mini/README.md`](03-visuals/perler-demo-v4-mard-221-mini/README.md)
+- 中央 10% 不透明度小耗版权分享底板：[`03-visuals/perler-demo-v4-mard-221-mini/xiaoneihao-cool-120x120-mard221-mini-numbered-pattern-watermarked.png`](03-visuals/perler-demo-v4-mard-221-mini/xiaoneihao-cool-120x120-mard221-mini-numbered-pattern-watermarked.png)
+- 第 010 集 10 秒成品：[`07-deliverables/episode-010-final-v1.mp4`](07-deliverables/episode-010-final-v1.mp4)
 - 小内耗 80×80 Artkal S-5mm 模板（已撤回，编号体系不符）：[`03-visuals/perler-demo-v3-artkal-s5/README.md`](03-visuals/perler-demo-v3-artkal-s5/README.md)
 - 小内耗 80×80 自编号模板（已废弃，禁止采购）：[`03-visuals/perler-demo-v2/README.md`](03-visuals/perler-demo-v2/README.md)
 - 小内耗 40×40 低豆量模板（历史 v1）：[`03-visuals/perler-demo-v1/README.md`](03-visuals/perler-demo-v1/README.md)
@@ -61,7 +64,7 @@
 
 ## 下一步
 
-1. 把广告首帧上传到可灵、即梦或 Grok，按图生视频提示词生成 10 秒主体动态。
-2. 在剪映把动态延长为 15—18 秒，并加入准确中文、口播和免责声明。
-3. 发布前确认本期征集数量、截止时间和预计返图时间。
+1. 发布前确认本期征集数量、截止时间和预计返图时间。
+2. 发布时使用中央水印版展示图纸，无水印母版只用于内部生产。
+3. 发布后补充作品链接，并记录 24/72 小时播放、完播和互动数据。
 4. 收到投稿后，先确定品牌、编号体系和尺寸，再用对应完整色卡重新量化；不能把本演示的 MARD 221 短码直接套给其他品牌。
