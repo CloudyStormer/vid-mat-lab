@@ -33,6 +33,10 @@ EYE_BOXES = (
     (0.405, 0.400, 0.545, 0.555),
     (0.555, 0.380, 0.705, 0.535),
 )
+EYE_EMPHASIS_BOXES = (
+    (0.405, 0.412, 0.545, 0.548),
+    (0.555, 0.392, 0.705, 0.528),
+)
 EYE_COMPARISON_BOX = (0.375, 0.345, 0.725, 0.585)
 
 
@@ -116,8 +120,59 @@ def square_crop(image: Image.Image) -> Image.Image:
     return image.crop((left, top, left + side, top + side))
 
 
-def prepare_grid_image(source: Image.Image, size: int) -> Image.Image:
+def emphasize_eyes(
+    image: Image.Image,
+    scale: float,
+    saturation: float,
+    contrast: float,
+) -> Image.Image:
+    result = image.copy()
+    for box in EYE_EMPHASIS_BOXES:
+        left, top, right, bottom = normalized_box(box, image.width)
+        width = right - left
+        height = bottom - top
+        crop = image.crop((left, top, right, bottom))
+        zoom_size = (round(width * scale), round(height * scale))
+        zoomed = crop.resize(zoom_size, Image.Resampling.LANCZOS)
+        crop_left = (zoomed.width - width) // 2
+        crop_top = (zoomed.height - height) // 2
+        zoomed = zoomed.crop(
+            (crop_left, crop_top, crop_left + width, crop_top + height)
+        )
+        zoomed = ImageEnhance.Color(zoomed).enhance(saturation)
+        zoomed = ImageEnhance.Contrast(zoomed).enhance(contrast)
+        zoomed = ImageEnhance.Sharpness(zoomed).enhance(1.30)
+
+        mask = Image.new("L", (width, height), 0)
+        mask_draw = ImageDraw.Draw(mask)
+        inset = max(2, round(min(width, height) * 0.035))
+        mask_draw.ellipse(
+            (inset, inset, width - inset - 1, height - inset - 1),
+            fill=255,
+        )
+        mask = mask.filter(
+            ImageFilter.GaussianBlur(radius=max(2, min(width, height) * 0.055))
+        )
+        result.paste(zoomed, (left, top), mask)
+    return result
+
+
+def prepare_grid_image(
+    source: Image.Image,
+    size: int,
+    eye_enhanced: bool = False,
+    eye_scale: float = 1.10,
+    eye_saturation: float = 1.16,
+    eye_contrast: float = 1.10,
+) -> Image.Image:
     image = square_crop(source)
+    if eye_enhanced:
+        image = emphasize_eyes(
+            image,
+            scale=eye_scale,
+            saturation=eye_saturation,
+            contrast=eye_contrast,
+        )
     image = image.resize((size, size), Image.Resampling.LANCZOS)
     image = ImageEnhance.Contrast(image).enhance(1.055)
     image = ImageEnhance.Color(image).enhance(1.035)
@@ -345,6 +400,7 @@ def render_numbered_pattern(
     output_dir: Path,
     stem: str,
     cell_size: int,
+    eye_enhanced: bool,
 ) -> None:
     grid_height = len(grid)
     grid_width = len(grid[0])
@@ -377,7 +433,10 @@ def render_numbered_pattern(
 
     draw.text(
         (coordinate_band, 15),
-        f"绿发星灵拼豆图纸｜{grid_width}×{grid_height} MARD 221 实做版",
+        (
+            f"绿发星灵拼豆图纸｜{grid_width}×{grid_height} "
+            f"MARD 221 {'眼睛增强版' if eye_enhanced else '实做版'}"
+        ),
         fill="#101318",
         font=title_font,
     )
@@ -537,13 +596,24 @@ def render_numbered_pattern(
 def render_eye_comparison(
     source: Image.Image,
     pixel_images: dict[int, Image.Image],
+    emphasized_sizes: set[int],
     output_dir: Path,
 ) -> None:
     panel_width = 720
     panel_height = 520
     title_height = 66
     gap = 18
-    labels = ["原图眼部", *[f"{size}×{size} 拼豆效果" for size in pixel_images]]
+    labels = [
+        "原图眼部",
+        *[
+            (
+                f"{size}×{size} 眼睛增强"
+                if size in emphasized_sizes
+                else f"{size}×{size} 拼豆效果"
+            )
+            for size in pixel_images
+        ],
+    ]
     panels: list[Image.Image] = []
 
     def fit_crop(crop: Image.Image, resample: Image.Resampling) -> Image.Image:
@@ -596,6 +666,7 @@ def render_eye_comparison(
 def write_readme(
     output_dir: Path,
     results: dict[int, Counter[str]],
+    emphasized_sizes: set[int],
 ) -> None:
     lines = [
         "# 绿发星灵拼豆图纸",
@@ -603,17 +674,19 @@ def write_readme(
         "## 结论",
         "",
         "- `78×78` 是严格适配用户现有板子的版本。",
-        "- `96×96` 是推荐版：双眼、睫毛和虹膜高光有更多格位，整体仍保持原图完整构图。",
-        "- 两版均使用 MARD 221 短色号，并在采购 CSV 中给出 Artkal M-2.6mm 官方完整色号。",
+        "- `96×96` 是上一轮高清版，双眼、睫毛和虹膜高光比 78 格更完整。",
+        "- `108×108` 是当前推荐的眼睛增强版：在 96 格基础上向外增加 6 圈，双眼局部约放大 10%，并加强瞳色、高光和轮廓。",
+        "- 所有版本均使用 MARD 221 短色号，并在采购 CSV 中给出 Artkal M-2.6mm 官方完整色号。",
         "",
         "## 文件",
         "",
     ]
     for size, counts in results.items():
         stem = f"green-fairy-{size}x{size}-mard221"
+        version_note = "（眼睛增强版，当前推荐）" if size in emphasized_sizes else ""
         lines.extend(
             [
-                f"### {size}×{size}",
+                f"### {size}×{size}{version_note}",
                 "",
                 f"- 像素效果：`{stem}-pixel-preview.png`",
                 f"- 格内色号图：`{stem}-numbered-pattern.png`",
@@ -629,7 +702,7 @@ def write_readme(
         [
             "## 眼睛处理",
             "",
-            "全局配色之外，双眼区域单独提取局部色组，避免紫色睫毛、青绿虹膜、黄色高光和白色反光在降格时被背景色吞掉。对比图见 `green-fairy-eye-detail-comparison.png`。",
+            "全局配色之外，双眼区域单独提取局部色组，避免紫色睫毛、青绿虹膜、黄色高光和白色反光在降格时被背景色吞掉。108×108 版还对双眼做了约 10% 的局部放大，并用椭圆羽化融合边缘，脸型、头发轮廓和身体构图保持不变。对比图见 `green-fairy-eye-detail-comparison.png`。",
             "",
             "## 使用提醒",
             "",
@@ -656,14 +729,24 @@ def main() -> None:
     parser.add_argument("--source", type=Path, default=DEFAULT_SOURCE)
     parser.add_argument("--palette-csv", type=Path, default=DEFAULT_PALETTE)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
-    parser.add_argument("--sizes", type=parse_sizes, default=parse_sizes("78,96"))
+    parser.add_argument("--sizes", type=parse_sizes, default=parse_sizes("78,96,108"))
     parser.add_argument("--global-colors", type=int, default=42)
     parser.add_argument("--eye-colors", type=int, default=28)
+    parser.add_argument("--eye-emphasis-size", type=int, default=108)
+    parser.add_argument("--eye-scale", type=float, default=1.10)
+    parser.add_argument("--eye-saturation", type=float, default=1.16)
+    parser.add_argument("--eye-contrast", type=float, default=1.10)
     parser.add_argument("--cell-size", type=int, default=34)
     args = parser.parse_args()
 
     if args.global_colors < 8 or args.eye_colors < 4:
         parser.error("palette sizes are too small")
+    if not 1.0 <= args.eye_scale <= 1.25:
+        parser.error("--eye-scale must be from 1.0 to 1.25")
+    if not 1.0 <= args.eye_saturation <= 1.5:
+        parser.error("--eye-saturation must be from 1.0 to 1.5")
+    if not 1.0 <= args.eye_contrast <= 1.4:
+        parser.error("--eye-contrast must be from 1.0 to 1.4")
     if args.cell_size < 28:
         parser.error("--cell-size must be at least 28")
 
@@ -674,15 +757,26 @@ def main() -> None:
 
     results: dict[int, Counter[str]] = {}
     pixel_images: dict[int, Image.Image] = {}
+    emphasized_sizes = {
+        size for size in args.sizes if size >= args.eye_emphasis_size
+    }
     with Image.open(args.source.resolve()) as source:
         source.load()
         for size in args.sizes:
-            prepared = prepare_grid_image(source, size)
+            eye_enhanced = size in emphasized_sizes
+            prepared = prepare_grid_image(
+                source,
+                size,
+                eye_enhanced=eye_enhanced,
+                eye_scale=args.eye_scale,
+                eye_saturation=args.eye_saturation,
+                eye_contrast=args.eye_contrast,
+            )
             global_colors, eye_colors = select_mard_colors(
                 prepared,
                 palette,
-                args.global_colors,
-                args.eye_colors,
+                args.global_colors + (4 if eye_enhanced else 0),
+                args.eye_colors + (8 if eye_enhanced else 0),
             )
             grid = build_grid(prepared, global_colors, eye_colors)
             stem = f"green-fairy-{size}x{size}-mard221"
@@ -697,15 +791,16 @@ def main() -> None:
                 output_dir,
                 stem,
                 args.cell_size,
+                eye_enhanced,
             )
             results[size] = counts
             print(
                 f"Generated {size}x{size}: {sum(counts.values())} beads, "
                 f"{len(counts)} colors"
             )
-        render_eye_comparison(source, pixel_images, output_dir)
+        render_eye_comparison(source, pixel_images, emphasized_sizes, output_dir)
 
-    write_readme(output_dir, results)
+    write_readme(output_dir, results, emphasized_sizes)
 
 
 if __name__ == "__main__":
