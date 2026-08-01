@@ -2,7 +2,7 @@
 
 ## 状态
 
-- 当前阶段：中央水印分享底板和 10 秒竖屏成品均已完成，待发布与数据复盘
+- 当前阶段：中央水印分享底板和 10 秒竖屏成品均已完成；绿发星灵 78×78 / 96×96 投稿图纸已交付，待发布与数据复盘
 - 创建日期：2026-07-29
 - 画面规格：竖屏 9:16
 - 建议成片：15—18 秒
@@ -49,6 +49,9 @@
 - 小内耗 80×80 自编号模板（已废弃，禁止采购）：[`03-visuals/perler-demo-v2/README.md`](03-visuals/perler-demo-v2/README.md)
 - 小内耗 40×40 低豆量模板（历史 v1）：[`03-visuals/perler-demo-v1/README.md`](03-visuals/perler-demo-v1/README.md)
 - 当前 MARD 221 重建脚本：[`07-deliverables/generate_mard221_template.py`](07-deliverables/generate_mard221_template.py)
+- 绿发星灵 78×78 / 96×96 MARD 221 图纸：[`03-visuals/perler-request-green-haired-fairy/README.md`](03-visuals/perler-request-green-haired-fairy/README.md)
+- 绿发星灵眼部细节对比：[`03-visuals/perler-request-green-haired-fairy/green-fairy-eye-detail-comparison.png`](03-visuals/perler-request-green-haired-fairy/green-fairy-eye-detail-comparison.png)
+- 动漫图眼部保护生成脚本：[`07-deliverables/generate_anime_mard221_pattern.py`](07-deliverables/generate_anime_mard221_pattern.py)
 - v1—v3 历史重建脚本：[`07-deliverables/generate_perler_template.py`](07-deliverables/generate_perler_template.py)
 
 ## 拼豆底板版本决定
