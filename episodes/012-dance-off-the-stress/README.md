@@ -2,7 +2,7 @@
 
 ## 状态
 
-- 当前阶段：v2 完整制作包已完成；待生成 5 张关键帧与 4 段自带中文口播和声音的动态
+- 当前阶段：v2 五张正式关键帧与完整制作包已完成；待生成 4 段自带中文口播和声音的动态
 - 创建日期：2026-07-31
 - v2 更新日期：2026-08-03
 - 画面规格：竖版 9:16，建议 1080×1920
@@ -33,6 +33,7 @@
 - 可导入字幕：[02-script/subtitles-v2-stop-inner-barrage.srt](02-script/subtitles-v2-stop-inner-barrage.srt)
 - 连续性设定：[03-visuals/continuity-v2-stop-inner-barrage.md](03-visuals/continuity-v2-stop-inner-barrage.md)
 - 分镜表：[03-visuals/storyboard-v2-stop-inner-barrage.csv](03-visuals/storyboard-v2-stop-inner-barrage.csv)
+- 五张正式关键帧：[03-visuals/v2-stop-inner-barrage/README.md](03-visuals/v2-stop-inner-barrage/README.md)
 - 图片提示词：[04-prompts/image-prompts-v2-stop-inner-barrage.md](04-prompts/image-prompts-v2-stop-inner-barrage.md)
 - 视频提示词：[04-prompts/video-prompts-v2-stop-inner-barrage.md](04-prompts/video-prompts-v2-stop-inner-barrage.md)
 - 剪映方案：[05-editing/edit-plan-v2-stop-inner-barrage.md](05-editing/edit-plan-v2-stop-inner-barrage.md)
@@ -67,10 +68,11 @@ v1 已生成的关键帧和原有制作文件继续保留，不覆盖：
 - 角色材质使用细腻半哑光 3D 效果，避免玻璃化和过度反光。
 - 2026-08-03：根据用户提供的 STOP 冲击转场和脑内弹幕思路建立 v2；v1 花海跳舞保留为历史候选。
 - 2026-08-03：确认四段动态直接生成同一青年男声的中文口播、环境音与关键音效，不再单独配音。
+- 2026-08-03：生成并归档五张 941×1672 连续关键帧；镜头 002—005 均以上一镜头和永久身份底稿共同锁定连续性。
 
 ## 下一步
 
-1. 按 v2 图片提示词先生成镜头001—005五张连续关键帧。
-2. 依次生成弹幕升级、按下急停、噪音清空、直接追问四段带同步原声的动态；四段必须沿用同一音色锁定。
+1. 使用已归档的五张关键帧，依次生成弹幕升级、按下急停、噪音清空、直接追问四段带同步原声的动态。
+2. 四段必须沿用同一音色锁定；错词、双人声或口型错误时重生成对应片段。
 3. 在剪映保留视频原声，只添加可读弹幕、STOP、冻结清除与整体音量微调，不再重新配音。
 4. 逐帧检查头顶标志、肢体数量、短腿比例和嘴部结构，再导出竖版成片。
