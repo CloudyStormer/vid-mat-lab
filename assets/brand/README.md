@@ -6,9 +6,11 @@
 
 PNG 工作副本：[resistor-mascot-identity-master.png](resistor-mascot-identity-master.png)；兼容旧链接的 [resistor-mascot-reference.png](resistor-mascot-reference.png) 与它内容相同。
 
+六视图派生参考：[resistor-mascot-multiview-v1](resistor-mascot-multiview-v1/)；使用与优先级规则见 [MULTIVIEW_IDENTITY_LOCK.md](MULTIVIEW_IDENTITY_LOCK.md)。
+
 完整不可覆盖规则见：[ORIGINAL_MASTER_LOCK.md](ORIGINAL_MASTER_LOCK.md)
 
-它是“内耗儿绝缘体”的固定叙事角色。生成新图片时，参考图承担“角色身份参考”，不是普通风格参考。
+它是“内耗儿绝缘体”的固定叙事角色。生成新图片时，永久原版与对应角度图都承担“角色身份参考”，不是普通风格参考；永久原版始终拥有最高优先级。
 
 必须保留：
 
@@ -36,6 +38,7 @@ PNG 工作副本：[resistor-mascot-identity-master.png](resistor-mascot-identit
 - 原 IP 只有极短的圆柱短臂和极短的圆柱短腿。脚几乎直接连接在蛋体底部；禁止生成大腿、膝盖、小腿、长胳膊、长腿、跨步和人类式跑步姿势。
 - 四肢的可见长度不得超过所上传参考帧中的长度；动作只能通过小幅摆动、轻微弯曲或角色整体平移完成，不能通过伸长肢体完成。
 - 同一只手需要换动作时，必须先完全结束前一个动作，再移动到新位置；前后两个手势不能同时存在。若仍容易增生肢体，应拆段或重做关键帧，使每只手在一段内只承担一个固定任务。
+- 动画从第 0 帧到最后一帧都必须保持同一个角色。禁止中途变脸、瘦身、增高、腰带漂移、锯齿纹重排、电路纹跳位、头顶标志变形、短手短脚拉长或用残影补肢体；任一帧出现就整段重生成。
 
 可以改变：
 
