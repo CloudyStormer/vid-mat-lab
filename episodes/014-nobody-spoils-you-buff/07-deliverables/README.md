@@ -1,48 +1,40 @@
-# 第 014 集交付状态｜21 秒生产版
+# 第 014 集交付状态｜v2 有来有回版
 
 ## 当前结论
 
-- 当前生产版本：`v1`，主题为“没人惯着你”反向 Buff。
-- 21 秒结构已锁定：0.0—0.6 秒为纯后期标题卡，后接 10 个独立 AI 有声片段。
-- 制作剧本、10 句口播、SRT、分镜、连续性、图片提示词、10 条独立图生有声视频提示词、剪辑、声音、声音锚点登记与发布材料均已建立。
-- 10 张 941×1672 正式关键帧已生成并逐张验收；04、09、10 的长臂初版已判退归档，当前正式版按永久母版和正面角度图返工通过。
-- 小耗儿 4 个对白镜统一使用内部配置 `VO-XH-01`，六个职业 NPC 统一使用内部配置 `VO-NPC-01`；两个编号都不是平台真实 Voice ID。
-- 正式动态、干声锚点、剪辑工程和成片尚未生成或验收，不得标成已完成或已发布。
+- 当前批准方向：`v2-conversational`，38.0 秒。
+- 用户明确要求六场全部保留“小耗儿提出要求—NPC 嘴硬回怼—反向发福利”，不得再使用 v1 的单向福利表达。
+- v2 用户原稿、时长审计、制作剧本、171 字口播、SRT、连续性、15 镜分镜、15 条图片提示词、15 条独立有声视频提示词、剪辑、声音和发布材料均已建立。
+- v2 的 15 张正式关键帧、实际声音锚点、动态源片、剪辑工程和成片尚未生成或验收，不得标成已完成或已发布。
+- v1 的 21 秒稿和 10 张已验收关键帧保留为历史追溯，但不再是当前生产版。
 
-## 制作文件
+## 当前制作文件
 
 - [单集入口](../README.md)
-- [原始草稿](../01-research/source-prompt-v1.md)
-- [制作简报](../01-research/brief-v1.md)
-- [21 秒制作剧本](../02-script/production-script-v1.md)
-- [口播](../02-script/voiceover-v1.md)
-- [字幕 SRT](../02-script/subtitles-v1.srt)
-- [视觉连续性](../03-visuals/continuity-v1.md)
-- [分镜表](../03-visuals/storyboard-v1.csv)
-- [关键帧与验收状态](../03-visuals/keyframes-v1/README.md)
-- [图片提示词](../04-prompts/image-prompts-v1.md)
-- [10 条独立图生有声视频提示词](../04-prompts/video-prompts-v1.md)
-- [剪辑方案](../05-editing/edit-plan-v1.md)
-- [声音方案](../05-editing/sound-plan-v1.md)
+- [用户确认原稿](../01-research/source-prompt-v2-conversational.md)
+- [制作简报与时长审计](../01-research/brief-v2-conversational.md)
+- [38 秒制作剧本](../02-script/production-script-v2-conversational.md)
+- [口播](../02-script/voiceover-v2-conversational.md)
+- [字幕 SRT](../02-script/subtitles-v2-conversational.srt)
+- [视觉连续性](../03-visuals/continuity-v2-conversational.md)
+- [15 镜分镜表](../03-visuals/storyboard-v2-conversational.csv)
+- [v2 关键帧计划](../03-visuals/keyframes-v2-conversational/README.md)
+- [15 条图片提示词](../04-prompts/image-prompts-v2-conversational.md)
+- [15 条独立有声视频提示词](../04-prompts/video-prompts-v2-conversational.md)
+- [剪辑方案](../05-editing/edit-plan-v2-conversational.md)
+- [声音方案](../05-editing/sound-plan-v2-conversational.md)
 - [声音锚点登记](../05-editing/voice-anchor-register-v1.md)
-- [发布材料](../06-publishing/publishing-v1.md)
-
-## 生产硬门槛
-
-1. 先为 `VO-XH-01` 和 `VO-NPC-01` 各生成并人工验收一条 6—10 秒干声锚点。
-2. 在声音锚点登记表中填完提供方、模型版本、实际 `provider_voice_id` 或 `reference_audio`、稳定项目内路径、SHA-256 和 seed / 复现参数。
-3. 把视频提示词中的全部方括号声音占位符替换为已验收实际值；不得把内部 `VO-*` 编号冒充平台 Voice ID。
-4. 先试生镜头 01 与 03，确认两套音色、逐字对白、无牙口型和非空音轨，再批量生成其余 8 个片段。
-5. 每个 AI 源片都必须有指定人声和极轻连续环境底噪；禁止自动 BGM、自动字幕、自动一次性拟音和第二人声。
-6. 小耗儿关键帧必须同时引用永久原版与对应六视图；10 条视频提示词均须包含完整逐帧身份锁。动态至少抽查五个时间点，任何一帧偏离母版都必须重生成。
+- [发布材料](../06-publishing/publishing-v2-conversational.md)
 
 ## 仍需完成
 
-1. 登记并锁定两套实际声音锚点，完成镜头 01 与 03 的声音动态小样。
-2. 生成并验收 10 个 AI 有声源片；逐条检查音轨存在、台词逐字正确、唯一说话者、音色一致、逐帧身份、道具不漂移和无模型 BGM。
-3. 按 21 秒剪辑方案完成 0.6 秒后期标题卡、黄字黑边字幕、六个反向福利标签、一次性音效与一条授权 BGM。
-4. 导出后复核 21.0 秒时长、非空音轨、响度、字幕安全区、AI 内容标识和发布文案。
+1. 生成并验收 15 张 v2 关键帧；每组正反打保持同一场景、左右位置、光线与道具状态。
+2. 登记 `VO-XH-01` 和 `VO-NPC-01` 的实际声音资产。
+3. 先试生镜头 02—03，确认完整一轮问答不会抢词、错口型或音色漂移。
+4. 生成其余 13 条有声源片，逐条检查音轨、逐字台词、唯一说话者和五点抽帧身份。
+5. 按 38.0 秒时间线完成字幕、BGM、拟音、标题卡与发布审核。
 
 ## 当前阻塞
 
-`VO-XH-01` 与 `VO-NPC-01` 的实际声音资产仍未登记，因此当前不可批量生成有声动态，也不可声称已经锁定声纹。关键帧是否可用须以逐张验收结果为准。
+- 15 张 v2 正反打关键帧尚未生成。
+- 两套实际声音锚点尚未登记；视频提示词中的方括号声音占位符不能直接留空提交生成。

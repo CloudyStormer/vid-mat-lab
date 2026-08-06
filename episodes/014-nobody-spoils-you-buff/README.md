@@ -2,7 +2,9 @@
 
 ## 状态
 
-- 当前阶段：21 秒生产稿、10 张正式关键帧、10 条独立有声视频提示词和完整剪辑/声音/发布包已完成；待登记实际声音锚点后生成动态。
+- 当前确认版本：`v2 有来有回版`。用户已明确否定 v1 的单向福利表达，要求六个场景完整保留“小耗儿提出要求—NPC 嘴硬回怼—反向发福利”。
+- v2 已完成 38 秒制作剧本、171 字口播、SRT、15 镜分镜、15 条图片提示词、15 条独立有声视频提示词、剪辑/声音/发布方案；15 张正式 v2 关键帧尚未生成。
+- v1 的 21 秒稿和 10 张关键帧保留作历史版本，不得继续作为当前剧情方向生成动态。
 - 创建日期：2026-08-06。
 - 画面规格：抖音竖屏 9:16，建议 1080×1920。
 - 视觉风格：与小耗儿系列一致的原创 Q 版二维手绘动画。
@@ -12,13 +14,19 @@
 
 小时候总被说“在外面没人惯着你”，长大后这句话像反向诅咒：小耗儿不要什么，NPC 偏给什么；NPC 嘴上都说“没人惯你”，实际全在发福利。
 
-## 生产版结构
+## 当前生产版结构｜v2
 
 - 0.0—0.6 秒：黑底大字与惊雷，完全后期制作，不交给视频模型生成文字。
-- 0.6—3.0 秒：街头小耗儿＋童年闪回，建立“我妈说，外面没人惯着你”。
-- 3.0—15.0 秒：牛肉面、找零、奶茶、送上门、准点下班、免费黑卡六连反向福利。
-- 15.0—17.0 秒：小耗儿抱满福利，口是心非说头疼。
-- 17.0—21.0 秒：亮黄背景眨眼收束，引导点赞留言。
+- 0.6—7.0 秒：小耗儿在街头完整说出“诅咒”设定；童年画面后期闪回。
+- 7.0—32.6 秒：牛肉面、找零、奶茶、送上门、准点下班、免费黑卡六组正反打；每组先说请求，再回怼发福利。
+- 32.6—34.6 秒：小耗儿被固定福利道具围住，说“我怎么觉得……不太对呢？”
+- 34.6—38.0 秒：亮黄背景挠头憋笑，以屏幕文字点题互动。
+
+## 时长结论
+
+- 用户确认原稿包含 171 个口播汉字。
+- 即使按每秒 5.8 字的自然语速上限，纯朗读仍需约 29.5 秒；加上说话人切换和结尾停留后不可能自然装进 20 秒。
+- 当前 v2 使用 38.0 秒完整原词时间线，平均约每秒 5.0 字，不暴力倍速、不让两人抢词。
 
 ## 声音原则
 
@@ -31,31 +39,37 @@
 
 - 永久原版 `assets/brand/resistor-mascot-identity-master-original.jpg` 是唯一最高身份源。
 - 新建的 `assets/brand/resistor-mascot-multiview-v1/` 保存正、背、左、右、左 3/4、右 3/4 六视图；正面文件与永久原版字节完全一致，其他五张只作角度参考。用户判退纵长鸡蛋轮廓后，右侧面、左 3/4 与右 3/4 已重做为横向饱满的近圆正式版，旧图只在 `archive-rejected-roundness/` 追溯。
-- 本集 10 个镜头均为正面或接近正面，图片提示词逐条同时引用永久原版与正面角度图。
-- 10 条视频提示词逐条包含完整逐帧身份锁，明确禁止动画中变脸、瘦身、长手长腿、纹路跳位、头顶标志变形、肢体增生和换画风。
-- 本集 10 条图片提示词与 10 条视频提示词已同步加入圆度硬门槛：正面、背面和 3/4 的机体宽度不得低于高度的 95%，纯侧面不得低于 92%，任何帧都禁止纵向鸡蛋化。
+- v2 的 15 个镜头均为正面或接近正面的正反打，图片提示词逐条同时引用永久原版、正面角度图和 v1 同场景参考。
+- v2 的 15 条视频提示词逐条包含完整逐帧身份锁，明确禁止动画中变脸、瘦身、长手长腿、纹路跳位、头顶标志变形、肢体增生和换画风。
+- v2 图片与视频提示词均明确“小耗”“小耗子”只是口语简称，禁止生成鼠耳、鼠尾、毛发、长鼻或牙齿。
 - 初版 04、09、10 因短臂被拉长而判退；当前正式版已返工通过，失败图只保留在关键帧归档目录作追溯。
 
-## 当前交付入口
+## 当前交付入口｜v2 有来有回版
 
-- 原始草稿：[01-research/source-prompt-v1.md](01-research/source-prompt-v1.md)
-- 制作简报：[01-research/brief-v1.md](01-research/brief-v1.md)
-- 21 秒制作剧本：[02-script/production-script-v1.md](02-script/production-script-v1.md)
-- 口播：[02-script/voiceover-v1.md](02-script/voiceover-v1.md)
-- 字幕：[02-script/subtitles-v1.srt](02-script/subtitles-v1.srt)
-- 连续性锁定：[03-visuals/continuity-v1.md](03-visuals/continuity-v1.md)
-- 10 张关键帧：[03-visuals/keyframes-v1/README.md](03-visuals/keyframes-v1/README.md)
-- 分镜表：[03-visuals/storyboard-v1.csv](03-visuals/storyboard-v1.csv)
-- 图片提示词：[04-prompts/image-prompts-v1.md](04-prompts/image-prompts-v1.md)
-- 10 条独立有声视频提示词：[04-prompts/video-prompts-v1.md](04-prompts/video-prompts-v1.md)
-- 剪辑方案：[05-editing/edit-plan-v1.md](05-editing/edit-plan-v1.md)
-- 声音方案：[05-editing/sound-plan-v1.md](05-editing/sound-plan-v1.md)
+- 用户确认原稿：[01-research/source-prompt-v2-conversational.md](01-research/source-prompt-v2-conversational.md)
+- 制作简报与时长审计：[01-research/brief-v2-conversational.md](01-research/brief-v2-conversational.md)
+- 38 秒制作剧本：[02-script/production-script-v2-conversational.md](02-script/production-script-v2-conversational.md)
+- 完整口播：[02-script/voiceover-v2-conversational.md](02-script/voiceover-v2-conversational.md)
+- 剪映字幕：[02-script/subtitles-v2-conversational.srt](02-script/subtitles-v2-conversational.srt)
+- 连续性与正反打锁定：[03-visuals/continuity-v2-conversational.md](03-visuals/continuity-v2-conversational.md)
+- 15 张关键帧计划：[03-visuals/keyframes-v2-conversational/README.md](03-visuals/keyframes-v2-conversational/README.md)
+- 15 镜分镜表：[03-visuals/storyboard-v2-conversational.csv](03-visuals/storyboard-v2-conversational.csv)
+- 15 条图片提示词：[04-prompts/image-prompts-v2-conversational.md](04-prompts/image-prompts-v2-conversational.md)
+- 15 条独立有声视频提示词：[04-prompts/video-prompts-v2-conversational.md](04-prompts/video-prompts-v2-conversational.md)
+- 剪辑方案：[05-editing/edit-plan-v2-conversational.md](05-editing/edit-plan-v2-conversational.md)
+- 声音方案：[05-editing/sound-plan-v2-conversational.md](05-editing/sound-plan-v2-conversational.md)
 - 声音锚点登记：[05-editing/voice-anchor-register-v1.md](05-editing/voice-anchor-register-v1.md)
-- 发布材料：[06-publishing/publishing-v1.md](06-publishing/publishing-v1.md)
+- 发布材料：[06-publishing/publishing-v2-conversational.md](06-publishing/publishing-v2-conversational.md)
 - 交付状态：[07-deliverables/README.md](07-deliverables/README.md)
+
+## 历史版本
+
+- v1 的 21 秒生产稿、10 张正式关键帧和对应提示词均保留在原 `*-v1.*` 文件中，用于追溯本次“单向展示缺少来回”的失败原因。
+- v1 不是当前批准方向；未得到用户新的明确指令前，不再按 v1 批量生成动态。
 
 ## 下一步
 
-1. 为 `VO-XH-01` 与 `VO-NPC-01` 各制作并人工验收一条 6—10 秒干声锚点，登记实际声音资产、模型、哈希和 seed。
-2. 先试生镜头 01 与 03，确认固定音色、逐字对白、无牙口型、非空音轨和逐帧身份不漂移。
-3. 批量生成其余 8 条有声源片，按 21 秒方案剪辑并完成五点抽帧验收。
+1. 按 v2 图片提示词生成 15 张正反打关键帧；同场景回应帧必须引用请求帧保持左右位置和道具状态连续。
+2. 为 `VO-XH-01` 与 `VO-NPC-01` 各制作并人工验收一条 6—10 秒干声锚点，登记实际声音资产、模型、哈希和 seed。
+3. 先试生镜头 02 与 03，确认一组完整问答的固定音色、唯一说话者、逐字对白、无牙口型和非空音轨。
+4. 批量生成其余 13 条源片，按 38 秒方案剪辑并完成五点抽帧验收。
