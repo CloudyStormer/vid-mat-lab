@@ -4,7 +4,7 @@
 
 - 当前批准方向：`v2-conversational`，38.0 秒。
 - 用户明确要求六场全部保留“小耗儿提出要求—NPC 嘴硬回怼—反向发福利”，不得再使用 v1 的单向福利表达。
-- v2 用户原稿、时长审计、制作剧本、171 字口播、SRT、连续性、15 镜分镜、15 条图片提示词、15 条独立有声视频提示词、剪辑、声音和发布材料均已建立。
+- v2 用户原稿、时长审计、制作剧本、171 字口播、SRT、连续性、15 镜分镜、15 条图片提示词、剪辑、声音和发布材料均已建立；视频提示词另有 v3 纯文字直接粘贴版。
 - v2 的 15 张 941×1672 正式关键帧已于 2026-08-07 全部生成并逐张验收；实际声音锚点、动态源片、剪辑工程和成片尚未生成或验收，不得标成已完成或已发布。
 - v1 的 21 秒稿和 10 张已验收关键帧保留为历史追溯，但不再是当前生产版。
 
@@ -21,7 +21,8 @@
 - [v2 正式关键帧（15/15）](../03-visuals/keyframes-v2-conversational/README.md)
 - [完整制作包总入口](complete-production-package-v2-conversational.md)
 - [15 条图片提示词](../04-prompts/image-prompts-v2-conversational.md)
-- [15 条独立有声视频提示词](../04-prompts/video-prompts-v2-conversational.md)
+- [15 条独立有声视频提示词（v2 追溯版）](../04-prompts/video-prompts-v2-conversational.md)
+- [15 条纯文字直接粘贴视频提示词（v3 当前版）](../04-prompts/video-prompts-v3-standalone-text.md)
 - [剪辑方案](../05-editing/edit-plan-v2-conversational.md)
 - [声音方案](../05-editing/sound-plan-v2-conversational.md)
 - [声音锚点登记](../05-editing/voice-anchor-register-v1.md)

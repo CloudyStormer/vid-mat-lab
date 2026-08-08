@@ -3,7 +3,7 @@
 ## 状态
 
 - 当前确认版本：`v2 有来有回版`。用户已明确否定 v1 的单向福利表达，要求六个场景完整保留“小耗儿提出要求—NPC 嘴硬回怼—反向发福利”。
-- v2 已完成 38 秒制作剧本、171 字口播、SRT、15 镜分镜、15 条图片提示词、15 条独立有声视频提示词、剪辑/声音/发布方案；15 张 941×1672 正式 v2 关键帧已于 2026-08-07 全部生成并验收。
+- v2 已完成 38 秒制作剧本、171 字口播、SRT、15 镜分镜、15 条图片提示词、剪辑/声音/发布方案；15 张 941×1672 正式 v2 关键帧已于 2026-08-07 全部生成并验收。视频生成提示词已追加 v3 纯文字直接粘贴版，删除关键帧路径、母版路径、内部声音编号和 Voice ID 占位符。
 - v1 的 21 秒稿和 10 张关键帧保留作历史版本，不得继续作为当前剧情方向生成动态。
 - 创建日期：2026-08-06。
 - 画面规格：抖音竖屏 9:16，建议 1080×1920。
@@ -55,7 +55,8 @@
 - 15 张关键帧计划：[03-visuals/keyframes-v2-conversational/README.md](03-visuals/keyframes-v2-conversational/README.md)
 - 15 镜分镜表：[03-visuals/storyboard-v2-conversational.csv](03-visuals/storyboard-v2-conversational.csv)
 - 15 条图片提示词：[04-prompts/image-prompts-v2-conversational.md](04-prompts/image-prompts-v2-conversational.md)
-- 15 条独立有声视频提示词：[04-prompts/video-prompts-v2-conversational.md](04-prompts/video-prompts-v2-conversational.md)
+- 15 条独立有声视频提示词（v2，保留追溯）：[04-prompts/video-prompts-v2-conversational.md](04-prompts/video-prompts-v2-conversational.md)
+- 15 条纯文字直接粘贴视频提示词（当前使用）：[04-prompts/video-prompts-v3-standalone-text.md](04-prompts/video-prompts-v3-standalone-text.md)
 - 剪辑方案：[05-editing/edit-plan-v2-conversational.md](05-editing/edit-plan-v2-conversational.md)
 - 声音方案：[05-editing/sound-plan-v2-conversational.md](05-editing/sound-plan-v2-conversational.md)
 - 声音锚点登记：[05-editing/voice-anchor-register-v1.md](05-editing/voice-anchor-register-v1.md)
