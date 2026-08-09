@@ -1,0 +1,2 @@
+# Episode 014 original-quality final export exceeds GitHub's regular 100 MB file limit.
+episodes/014-nobody-spoils-you-buff/07-deliverables/episode-014-v1.mp4 filter=lfs diff=lfs merge=lfs -text

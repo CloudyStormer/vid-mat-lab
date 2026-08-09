@@ -2,8 +2,9 @@
 
 ## 状态
 
-- 当前确认版本：`v2 有来有回版`。用户已明确否定 v1 的单向福利表达，要求六个场景完整保留“小耗儿提出要求—NPC 嘴硬回怼—反向发福利”。
+- 当前剧情版本：`v2 有来有回版`。用户已明确否定旧剧情 v1 的单向福利表达，要求六个场景完整保留“小耗儿提出要求—NPC 嘴硬回怼—反向发福利”。当前完整剪映导出版本为成片 v1。
 - v2 已完成 38 秒制作剧本、171 字口播、SRT、15 镜分镜、15 条图片提示词、剪辑/声音/发布方案；15 张 941×1672 正式 v2 关键帧已于 2026-08-07 全部生成并验收。视频生成提示词已追加 v3 纯文字直接粘贴版，删除关键帧路径、母版路径、内部声音编号和 Voice ID 占位符。
+- 2026-08-09：剪映成片 v1 与独立封面已归档。成片 87.842 秒、1440×2528、60 fps、含 AAC 双声道；封面 1440×2528。两份项目副本均与用户提供源文件 SHA-256 一致，当前进入待发布阶段。
 - v1 的 21 秒稿和 10 张关键帧保留作历史版本，不得继续作为当前剧情方向生成动态。
 - 创建日期：2026-08-06。
 - 画面规格：抖音竖屏 9:16，建议 1080×1920。
@@ -63,6 +64,9 @@
 - 发布材料：[06-publishing/publishing-v2-conversational.md](06-publishing/publishing-v2-conversational.md)
 - 交付状态：[07-deliverables/README.md](07-deliverables/README.md)
 - 完整制作包总入口：[07-deliverables/complete-production-package-v2-conversational.md](07-deliverables/complete-production-package-v2-conversational.md)
+- 剪映成片 v1：[07-deliverables/episode-014-v1.mp4](07-deliverables/episode-014-v1.mp4)
+- 独立封面：[07-deliverables/episode-014-v1-cover.jpg](07-deliverables/episode-014-v1-cover.jpg)
+- 成片校验清单：[07-deliverables/MANIFEST.md](07-deliverables/MANIFEST.md)
 
 ## 历史版本
 
@@ -71,6 +75,6 @@
 
 ## 下一步
 
-1. 为 `VO-XH-01` 与 `VO-NPC-01` 各制作并人工验收一条 6—10 秒干声锚点，登记实际声音资产、模型、哈希和 seed。
-2. 先用正式关键帧试生镜头 02 与 03，确认一组完整问答的固定音色、唯一说话者、逐字对白、无牙口型和非空音轨。
-3. 批量生成其余 13 条源片，按 38 秒方案剪辑并完成五点抽帧验收。
+1. 发布前完整播放复核字幕、声音、封面和 AI 内容标识。
+2. 发布后登记发布时间、作品链接以及 24/72 小时数据。
+3. 如需调整成片或封面，新建 v2 文件，不覆盖当前 v1。

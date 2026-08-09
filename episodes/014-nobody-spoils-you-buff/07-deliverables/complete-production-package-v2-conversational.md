@@ -9,6 +9,9 @@
 
 ## 一键入口
 
+- [剪映成片 v1](episode-014-v1.mp4)
+- [独立封面](episode-014-v1-cover.jpg)
+- [成片与封面校验清单](MANIFEST.md)
 - [完整口播与声音配置](../02-script/voiceover-v2-conversational.md)
 - [剪映字幕 SRT](../02-script/subtitles-v2-conversational.srt)
 - [15 条图片生成提示词](../04-prompts/image-prompts-v2-conversational.md)
