@@ -1,0 +1,9 @@
+镜头编号,文件名,宽,高,字节数,SHA256,来源,机位参考,验收状态,用途
+"第016集-镜头001","01-opening-community-monologue.png","941","1672","2056812","c3466f53d9e1c324b6d6ec14993a993ae137d7c61aa0ef47708e958219d1237e","2026-08-11内置imagegen新生成","永久母版+01-front-master-original.jpg","通过","自然开场"
+"第016集-镜头002","02-appearance-attacker.png","941","1672","1981354","f52497f09cffbc55f3e22289d68b620f870364271c74bff098df850e740c74a2","复用第015集镜头004","NPC关键帧","通过","人身攻击正打"
+"第016集-镜头003","03-appearance-xiaohao-reply.png","941","1672","1838533","68df372ad3434596d76cf8a56fbc3a3c4c0a815e089e618ba25b6ba07750b190","复用第015集镜头005","永久母版+05-left-facing-three-quarter.png","通过","人身攻击反打"
+"第016集-镜头004","04-child-teasing-first.png","941","1672","1529299","cbb4bb8415b04c99529a4f3e183244a4c12ab9114d696c541da9aceb5ece3e31","复用第015集镜头006","NPC关键帧","通过","小孩第一次挑事"
+"第016集-镜头005","05-child-xiaohao-question.png","941","1672","1424171","214578c91d914ac470241bb74ae8096bae40983f2c60120533f4fb53e0cf4209","复用第015集镜头007","永久母版+05-left-facing-three-quarter.png","通过","小耗儿追问"
+"第016集-镜头006","06-child-joking-excuse.png","941","1672","1512230","9586144693cd3747e97faccc989dea8fe3bb417b695e71c6ee3615b2c588f487","复用第015集镜头008","NPC关键帧","通过","小孩拿玩笑挡箭"
+"第016集-镜头007","07-child-xiaohao-final.png","941","1672","1489394","be897cc99c5e317491022b0dd0dbfd34f6d50cf93732a7c0a25c576efa95f6bc","复用第015集镜头009","永久母版+05-left-facing-three-quarter.png","通过","小耗儿停止陪笑"
+"第016集-镜头008","08-closing-community-boundary.png","941","1672","1890174","a5d19c7c9d85998bbbc31cf2c138eafeb4fa31a806f478c10035ceef20fcb99c","2026-08-11内置imagegen新生成并引用镜头001","永久母版+01-front-master-original.jpg+镜头001","通过","自然收束"
